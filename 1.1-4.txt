@@ -1,0 +1,27 @@
+1:
+  Trying 80.92.65.53...
+  Connected to weer.nl.
+  Escape character is '^]'.
+
+  GET / HTTP/1.1
+  Host: weer.nl
+
+  HTTP/1.1 301 Moved Permanently
+  Date: Thu, 15 Nov 2018 13:06:42 GMT
+  Server: Apache
+  Status: 301 Moved Permanently
+  Location: http://www.weer.nl/
+  Content-Length: 0
+  Content-Type: text/html; charset=UTF-8
+
+  HEAD / HTTP/1.1
+  Host: www.weer.nl
+
+  GET / HTTP/1.1
+  Host: www.weer.nl
+2:
+  No, because some of the files linked in index.html were not saved.
+3:
+  To support compatibility with old versions of internet explorer, i.e. the reason why internet explorer is forever confined within the gates of hell.
+4:
+  To let the browser know how content should be cached, if ever.
