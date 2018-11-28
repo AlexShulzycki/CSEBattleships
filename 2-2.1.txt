@@ -1,0 +1,69 @@
+Simple put:
+
+  Trying 52.45.84.34...
+  Connected to httpbin.org.
+  Escape character is '^]'.
+  HTTP/1.1 200 OK
+  Connection: keep-alive
+  Server: gunicorn/19.9.0
+  Date: Wed, 28 Nov 2018 15:42:25 GMT
+  Content-Type: application/json
+  Content-Length: 298
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Credentials: true
+  Via: 1.1 vegur
+
+  {
+    "args": {},
+    "data": "Hello World!",
+    "files": {},
+    "form": {},
+    "headers": {
+      "Connection": "close",
+      "Content-Length": "12",
+      "Content-Type": "text/plain",
+      "Host": "httpbin.org"
+    },
+    "json": null,
+    "origin": "80.112.139.108",
+    "url": "http://httpbin.org/put"
+  }
+
+
+Wrong length:
+
+  Trying 52.86.186.182...
+  Connected to httpbin.org.
+  Escape character is '^]'.
+  HTTP/1.1 200 OK
+  Connection: keep-alive
+  Server: gunicorn/19.9.0
+  Date: Wed, 28 Nov 2018 15:45:09 GMT
+  Content-Type: application/json
+  Content-Length: 297
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Credentials: true
+  Via: 1.1 vegur
+
+  {
+    "args": {},
+    "data": "Hello World",
+    "files": {},
+    "form": {},
+    "headers": {
+      "Connection": "close",
+      "Content-Length": "11",
+      "Content-Type": "text/plain",
+      "Host": "httpbin.org"
+    },
+    "json": null,
+    "origin": "80.112.139.108",
+    "url": "http://httpbin.org/put"
+  }
+  HTTP/1.1 400 Bad Request
+  Connection: close
+  Server: Cowboy
+  Date: Wed, 28 Nov 2018 15:45:08 GMT
+  Content-Length: 0
+
+The server returns a 400.
