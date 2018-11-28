@@ -1,0 +1,36 @@
+The page reloads without having to re-enter login details.
+
+No authorization returns a 401
+  Trying 52.73.9.93...
+  Connected to httpbin.org.
+  Escape character is '^]'.
+  HTTP/1.1 401 UNAUTHORIZED
+  Connection: keep-alive
+  Server: gunicorn/19.9.0
+  Date: Wed, 28 Nov 2018 15:52:09 GMT
+  Www-Authenticate: Basic realm="Fake Realm" 
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Credentials: true
+  Content-Length: 0
+  Via: 1.1 vegur
+
+Manual authorization:
+  Trying 52.45.111.123...
+  Connected to httpbin.org.
+  Escape character is '^]'.
+  HEAD /basic-auth/user/passwd HTTP/1.1
+  Authorization: Basic dXNlcjpwYXNzd2Q=
+  host:httpbin.org
+
+  HTTP/1.1 200 OK
+  Connection: keep-alive
+  Server: gunicorn/19.9.0
+  Date: Wed, 28 Nov 2018 16:01:22 GMT
+  Content-Type: application/json
+  Content-Length: 47
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Credentials: true
+  Via: 1.1 vegur
+
+Requesting the same page without authorization return a 401. Reloading the browser
+probably redoes the authorization, but remembers it so the user doesn't need to re-enter Credentials.
