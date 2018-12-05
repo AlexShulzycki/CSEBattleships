@@ -1,0 +1,3794 @@
+{
+  "name": "Untitled project",
+  "description": null,
+  "contentType": "json",
+  "fileVersion": 3,
+  "type": "WebProject",
+  "theme": "napkin",
+  "contents": {
+    "id": 72391760,
+    "appName": "Untitled project",
+    "saveTime": "2018-12-04T12:18:42.5Z",
+    "lastNotificationId": 0,
+    "theme": "napkin",
+    "isCrazy": true,
+    "defaultFontFamily": "TomsHandwritten",
+    "pageGroups": [
+      {
+        "type": "sketch.framework.PageGroup",
+        "properties": {
+          "id": "0fc31c2c-ee8b-3f96-fa65-9de0b6e4ddc1",
+          "name": "Default group",
+          "pageIds": [
+            "e8b22712-dd9e-017f-c6a9-0d0b5e512635",
+            "3fa1f915-ddbb-4470-50b8-ca8eea968f61"
+          ]
+        }
+      }
+    ],
+    "satelliteProjects": [],
+    "extraParameters": null,
+    "pages": [
+      {
+        "version": 1,
+        "id": "e8b22712-dd9e-017f-c6a9-0d0b5e512635",
+        "type": "sketch.ui.pages.PortableDevicePage",
+        "name": "Page 1",
+        "background": {
+          "value": null,
+          "type": null,
+          "lineWidth": 0,
+          "__type__": "sketch.framework.Brush"
+        },
+        "children": [
+          {
+            "type": "sketch.ui.common.PortableDevice",
+            "version": 1,
+            "id": "f1cfba7d-a7d3-d695-3e1b-8dbc3b71dfd0",
+            "properties": {
+              "width": 3704,
+              "height": 2288
+            },
+            "children": [
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "6f87e8ed-a643-045d-8036-734ae4e95d94",
+                "properties": {
+                  "width": 1362,
+                  "height": 762,
+                  "left": 4,
+                  "top": 3,
+                  "backgroundBrush.value": "rgba(0,0,156,1)",
+                  "backgroundBrush.type": "color",
+                  "backgroundBrush.__type__": "sketch.framework.Brush",
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.lineWidth": 0,
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 4,
+                    "y": 3,
+                    "cp1x": 4,
+                    "cp1y": 3,
+                    "cp2x": 4,
+                    "cp2y": 3
+                  },
+                  {
+                    "x": 1366,
+                    "y": 3,
+                    "cp1x": 1366,
+                    "cp1y": 3,
+                    "cp2x": 1366,
+                    "cp2y": 3
+                  },
+                  {
+                    "x": 1366,
+                    "y": 765,
+                    "cp1x": 1366,
+                    "cp1y": 765,
+                    "cp2x": 1366,
+                    "cp2y": 765
+                  },
+                  {
+                    "x": 4,
+                    "y": 765,
+                    "cp1x": 4,
+                    "cp1y": 765,
+                    "cp2x": 4,
+                    "cp2y": 765
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "b3da3219-b93c-d636-1053-dc5f9cadb54a",
+                "properties": {
+                  "width": 417,
+                  "height": 128,
+                  "name": null,
+                  "left": 476.99215630055414,
+                  "top": 42.898798931520105,
+                  "text": "Battleship",
+                  "font.size": 146,
+                  "font.color.value": "rgba(255,255,255,1)",
+                  "font.color.type": "color",
+                  "font.color.lineWidth": 0,
+                  "font.color.__type__": "sketch.framework.Brush",
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                },
+                "tags": "Primitive,H1"
+              },
+              {
+                "type": "sketch.ui.common.TextBlock",
+                "version": 2,
+                "id": "1712d2e1-489b-836a-be7b-b6834ec0a57b",
+                "properties": {
+                  "width": 439,
+                  "height": 172,
+                  "name": null,
+                  "left": 188,
+                  "top": 254,
+                  "text": "A two-player naval combat game. Can you guess where your opponent's ships are?",
+                  "textAlign": "center",
+                  "font.family": "Verdana",
+                  "font.size": 29,
+                  "font.color.value": "rgba(255,255,255,1)",
+                  "font.color.type": "color",
+                  "font.color.lineWidth": 0,
+                  "font.color.__type__": "sketch.framework.Brush",
+                  "font.__type__": "sketch.framework.Font",
+                  "multiLine": true,
+                  "clipSelf": true
+                },
+                "tags": "Primitive,P"
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "b84a05a8-d15c-a283-7cca-09350581e8b9",
+                "properties": {
+                  "name": null,
+                  "left": 257.99436472078651,
+                  "top": 496,
+                  "templateId": "ui.web.templates.ButtonTemplate",
+                  "width": 300,
+                  "height": 94,
+                  "text": "Play!",
+                  "showIcon": false
+                },
+                "states": {
+                  "default": {
+                    "properties": {
+                      "font.family": "TomsHandwritten",
+                      "font.size": 65,
+                      "font.lineHeight": 1.1,
+                      "font.italic": false,
+                      "font.bold": false,
+                      "font.underline": false,
+                      "font.color.value": "web.button.text",
+                      "font.color.type": "resource",
+                      "font.color.lineWidth": null,
+                      "font.color.__type__": "sketch.framework.Brush",
+                      "font.__type__": "sketch.framework.Font",
+                      "backgroundBrush.value": {
+                        "sliders": [
+                          [
+                            0,
+                            "rgba(5,252,21,1)"
+                          ],
+                          [
+                            100,
+                            "rgba(0,168,0,1)"
+                          ]
+                        ],
+                        "direction": "radial"
+                      },
+                      "backgroundBrush.type": "gradient",
+                      "backgroundBrush.lineWidth": 0,
+                      "backgroundBrush.__type__": "sketch.framework.Brush"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "a07f4356-5dff-9fe7-3df7-24065703b1f5",
+                "properties": {
+                  "width": 182,
+                  "height": 32,
+                  "name": null,
+                  "left": 73.9943647207865,
+                  "top": 707.6457390381795,
+                  "text": "Players online: xx",
+                  "font.size": 37,
+                  "font.color.value": "rgba(255,255,255,1)",
+                  "font.color.type": "color",
+                  "font.color.lineWidth": 0,
+                  "font.color.__type__": "sketch.framework.Brush",
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Image",
+                "version": 6,
+                "id": "0ba71d9f-9492-e978-52e8-f797e538a8f4",
+                "properties": {
+                  "left": 782,
+                  "top": 222,
+                  "source.width": 2110,
+                  "source.height": 1846,
+                  "source.url": "https://ninjastorage.blob.core.windows.net/companyfiles/72391389/ec3ba4e5-7fa2-49c7-9822-7e5f452d38c2.png",
+                  "source.__type__": "sketch.framework.ImageSourceURL",
+                  "clipSelf": true,
+                  "flipVertical": true,
+                  "flipHorizontal": true,
+                  "width": 520,
+                  "height": 458,
+                  "angle": 180
+                }
+              }
+            ],
+            "panelProperties": {
+              "type": "sketch.ui.common.PortableDevicePanel",
+              "version": 1,
+              "id": "5efedf31-90d6-7d6d-0b13-ef33f8ecc27e",
+              "properties": {
+                "width": 1366,
+                "height": 768,
+                "left": 1340,
+                "top": 760,
+                "clipSelf": true
+              }
+            }
+          }
+        ],
+        "isDeleted": false,
+        "isStoryBoard": false,
+        "groupId": "0fc31c2c-ee8b-3f96-fa65-9de0b6e4ddc1",
+        "screenType": "Browser"
+      },
+      {
+        "version": 1,
+        "id": "3fa1f915-ddbb-4470-50b8-ca8eea968f61",
+        "type": "sketch.ui.pages.PortableDevicePage",
+        "name": "Page 2",
+        "background": {
+          "value": null,
+          "type": null,
+          "lineWidth": 0,
+          "__type__": "sketch.framework.Brush"
+        },
+        "children": [
+          {
+            "type": "sketch.ui.common.PortableDevice",
+            "version": 1,
+            "id": "a17d471c-9b8c-c420-27a9-0332f887e90c",
+            "properties": {
+              "width": 3704,
+              "height": 2288
+            },
+            "children": [
+              {
+                "type": "sketch.framework.Rectangle",
+                "version": 3,
+                "id": "05e21ca7-926f-b763-04a7-7aab9b5dba1d",
+                "properties": {
+                  "width": 480,
+                  "height": 479,
+                  "left": 97.0001523048436,
+                  "top": 165,
+                  "backgroundBrush.value": "rgba(158,158,255,1)",
+                  "backgroundBrush.type": "color",
+                  "backgroundBrush.lineWidth": 0,
+                  "backgroundBrush.__type__": "sketch.framework.Brush"
+                }
+              },
+              {
+                "type": "sketch.ui.common.TextBlock",
+                "version": 2,
+                "id": "1d1415a0-17ef-9110-cf78-a1ec6b83ec9c",
+                "properties": {
+                  "width": 480,
+                  "height": 45,
+                  "name": null,
+                  "left": 97.0001523048436,
+                  "top": 120,
+                  "text": "  A    B    C    D    E    F    G    H    I      J",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "multiLine": true,
+                  "clipSelf": true
+                },
+                "tags": "Primitive,P"
+              },
+              {
+                "type": "sketch.ui.common.TextBlock",
+                "version": 2,
+                "id": "1ca29015-92f6-5809-f628-d39c34aac999",
+                "properties": {
+                  "width": 480,
+                  "height": 45,
+                  "name": null,
+                  "left": 695.0001523048436,
+                  "top": 114,
+                  "text": "  A    B    C    D    E    F    G    H    I      J",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "multiLine": true,
+                  "clipSelf": true
+                },
+                "tags": "Primitive,P"
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "e9fa443d-91a0-d91d-8633-656940909b8b",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 68.691336266326971,
+                  "top": 172.03221247442025,
+                  "text": "1",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "d8538242-9910-65dd-6695-65d8fb9df062",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 68.691336266326971,
+                  "top": 462.03221247442025,
+                  "text": "7",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "b3b95e06-b158-794d-c3b7-825f8cc179ab",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 68.691336266326971,
+                  "top": 510.03221247442025,
+                  "text": "8",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "8a0b5081-1802-4547-94ce-5b53dd5e2cd9",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 68.691336266326971,
+                  "top": 557.03221247442025,
+                  "text": "9",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "ad45781a-74ce-cb35-f6cf-28ffb5301efd",
+                "properties": {
+                  "width": 29,
+                  "height": 33,
+                  "name": null,
+                  "left": 61.6902701324218,
+                  "top": 605.15437931948122,
+                  "text": "10",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "3c03840d-b76d-6784-937b-22a63623df75",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 68.691336266326971,
+                  "top": 411.03221247442025,
+                  "text": "6",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "670ae73e-e34c-3af6-2733-d67d60a2632a",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 68.691336266326971,
+                  "top": 318.03221247442025,
+                  "text": "4",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "fe33df57-b0b1-e3a0-75b6-50ebb081d7f9",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 68.691336266326971,
+                  "top": 268.03221247442025,
+                  "text": "3",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "0697e7de-6f06-e18a-1d7f-b38dbe1623df",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 68.691336266326971,
+                  "top": 220.03221247442025,
+                  "text": "2",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "ad11b386-f097-a337-9c91-a6b3af9bf3f6",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 68.691336266326971,
+                  "top": 364.03221247442025,
+                  "text": "5",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "ac63c73b-a6a3-13aa-013d-2aafd69bd7e1",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 664.6913362663272,
+                  "top": 165.03221247442025,
+                  "text": "1",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "ce5f6c30-d882-eb64-0f45-555429addfa5",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 664.6913362663272,
+                  "top": 455.03221247442025,
+                  "text": "7",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "88d18737-d43c-7d71-6e4f-e2536a9821d2",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 664.6913362663272,
+                  "top": 503.03221247442025,
+                  "text": "8",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "7132d1a1-ee6c-6389-5cff-ae3a704b40f0",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 664.6913362663272,
+                  "top": 550.03221247442025,
+                  "text": "9",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "c76443c1-6fce-e85d-0dcc-29e4ef7fb113",
+                "properties": {
+                  "width": 29,
+                  "height": 33,
+                  "name": null,
+                  "left": 657.690270132422,
+                  "top": 598.15437931948122,
+                  "text": "10",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "2ad11206-6ef8-0285-03bd-ef85b8725b26",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 664.6913362663272,
+                  "top": 404.03221247442025,
+                  "text": "6",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "2628b7fd-996a-c10c-5c68-2fc55590ee1a",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 664.6913362663272,
+                  "top": 311.03221247442025,
+                  "text": "4",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "f76a8348-b81c-1ea1-a778-da0e575f1cc9",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 664.6913362663272,
+                  "top": 261.03221247442025,
+                  "text": "3",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "3b176901-6147-61e1-cb50-b4724b2f2635",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 664.6913362663272,
+                  "top": 213.03221247442025,
+                  "text": "2",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "abf650e7-739a-bd4b-79c1-4740502cfb8b",
+                "properties": {
+                  "width": 15,
+                  "height": 33,
+                  "name": null,
+                  "left": 664.6913362663272,
+                  "top": 357.03221247442025,
+                  "text": "5",
+                  "font.family": "Times New Roman",
+                  "font.size": 29,
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "02a38b9d-0142-07ca-e167-f3a40bd238f3",
+                "properties": {
+                  "name": "Asset [02a38b9d-0142-07ca-e167-f3a40bd238f3]",
+                  "left": 97.0001523048436,
+                  "top": 165,
+                  "templateId": "a12dcb1c-0825-5c64-1386-6a9b298668e2",
+                  "width": 480,
+                  "height": 479
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "668d57ea-55fd-070f-253f-1fcd93a7e6ea",
+                "properties": {
+                  "name": "Asset [668d57ea-55fd-070f-253f-1fcd93a7e6ea]",
+                  "left": 528.0001523048436,
+                  "top": 452,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.Rectangle",
+                "version": 3,
+                "id": "c24acd97-d8cd-0915-4785-14b6cab14806",
+                "properties": {
+                  "left": -1340,
+                  "top": -760
+                }
+              },
+              {
+                "type": "sketch.framework.Rectangle",
+                "version": 3,
+                "id": "1ecb2213-04a3-abfa-feaf-2ab15763e1a2",
+                "properties": {
+                  "left": -1340,
+                  "top": -760
+                }
+              },
+              {
+                "type": "sketch.framework.Rectangle",
+                "version": 3,
+                "id": "7fd9ae75-f3f8-552b-88cf-851c39395913",
+                "properties": {
+                  "left": -1340,
+                  "top": -760
+                }
+              },
+              {
+                "type": "sketch.framework.Rectangle",
+                "version": 3,
+                "id": "58a513fa-80e0-decc-7e25-5f76553aa142",
+                "properties": {
+                  "left": -1340,
+                  "top": -760
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "d916e470-cb20-9b45-d3f7-fb6b7ecf804a",
+                "properties": {
+                  "name": null,
+                  "left": 480.0001523048436,
+                  "top": 452,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "f8a2cc42-7e5c-aa84-e003-b1c224b3e8e7",
+                "properties": {
+                  "name": null,
+                  "left": 386.0001523048436,
+                  "top": 549,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "39e6952d-5b95-648b-b323-3c908ae12d3f",
+                "properties": {
+                  "name": null,
+                  "left": 338.0001523048436,
+                  "top": 549,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "d88370ea-1a82-d0e3-6a6d-6db5b16e43d7",
+                "properties": {
+                  "name": null,
+                  "left": 290.0001523048436,
+                  "top": 549,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "0843214c-79d5-f12b-7a15-779f68b7ac95",
+                "properties": {
+                  "name": null,
+                  "left": 192.0001523048436,
+                  "top": 310,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "b56ac233-05f6-5314-f02d-ede68606ea13",
+                "properties": {
+                  "name": null,
+                  "left": 192.0001523048436,
+                  "top": 356,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "d1de0145-2c1d-a355-139d-81a7a8a44878",
+                "properties": {
+                  "name": null,
+                  "left": 192.0001523048436,
+                  "top": 403,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "cd34e7f7-837c-5116-f321-f6147a8aa965",
+                "properties": {
+                  "name": null,
+                  "left": 192.0001523048436,
+                  "top": 452,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "1df49049-bbb2-6af5-4fed-8f01737bb777",
+                "properties": {
+                  "name": null,
+                  "left": 290.0001523048436,
+                  "top": 357.03221247442025,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "fa6a8bcb-4e18-9131-7686-a4ea4c906a8f",
+                "properties": {
+                  "name": null,
+                  "left": 338.0001523048436,
+                  "top": 357,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "ff875f78-f879-b8b9-b767-7dc95d34a552",
+                "properties": {
+                  "name": null,
+                  "left": 290.0001523048436,
+                  "top": 212,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "f6dcdf73-cc15-d128-e870-4fe9b5b00cbc",
+                "properties": {
+                  "name": null,
+                  "left": 338.0001523048436,
+                  "top": 212,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "00dc3ef3-2034-7542-bc17-ebb907274a2d",
+                "properties": {
+                  "name": null,
+                  "left": 386.0001523048436,
+                  "top": 212,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "a9317ea3-7087-daa0-8204-41a1057b4de3",
+                "properties": {
+                  "name": null,
+                  "left": 432.0001523048436,
+                  "top": 212,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "cf1374f2-65dd-906b-9021-077dc3711793",
+                "properties": {
+                  "name": null,
+                  "left": 480.0001523048436,
+                  "top": 212,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "86449f25-5a36-d7fd-4e6e-d8e8e23a22a4",
+                "properties": {
+                  "name": null,
+                  "left": 144.0001523048436,
+                  "top": 549,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "5e36e87c-9329-231b-1546-32762ad2bd16",
+                "properties": {
+                  "name": "Asset [5e36e87c-9329-231b-1546-32762ad2bd16]",
+                  "left": 529.0001523048436,
+                  "top": 596,
+                  "templateId": "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "0fdab917-ddcb-085d-81b7-7db34bfdb83e",
+                "properties": {
+                  "name": null,
+                  "left": 97.0001523048436,
+                  "top": 164,
+                  "templateId": "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "c520cb22-1266-c3c8-2159-090795be6e18",
+                "properties": {
+                  "name": null,
+                  "left": 529.0001523048436,
+                  "top": 164,
+                  "templateId": "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "c5bc1345-706b-2a7e-46ed-48beb632037c",
+                "properties": {
+                  "name": null,
+                  "left": 432.0001523048436,
+                  "top": 308,
+                  "templateId": "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "bdca5c40-7af5-13b6-de3c-00c04539a33b",
+                "properties": {
+                  "name": null,
+                  "left": 240.0001523048436,
+                  "top": 357,
+                  "templateId": "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "2f19f2bf-2855-220c-6ea5-6dce84d7969d",
+                "properties": {
+                  "name": null,
+                  "left": 338.0001523048436,
+                  "top": 452,
+                  "templateId": "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "f0ac88ba-8ab9-45ff-2f1b-fa51cdc2299d",
+                "properties": {
+                  "name": null,
+                  "left": 97.0001523048436,
+                  "top": 403,
+                  "templateId": "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "01c6f512-58c7-74cb-e47f-12dbd490f6fc",
+                "properties": {
+                  "name": "Asset [01c6f512-58c7-74cb-e47f-12dbd490f6fc]",
+                  "left": 97.0001523048436,
+                  "top": 502,
+                  "templateId": "1fdc8ae5-9f7b-9faa-01e0-0bdc06c14057",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "16667e1f-0a84-e762-9b0e-3642703d93ec",
+                "properties": {
+                  "name": "Asset [16667e1f-0a84-e762-9b0e-3642703d93ec]",
+                  "left": 529.0001523048436,
+                  "top": 452,
+                  "templateId": "a989b6cf-b24b-ce93-4feb-036a4b3f4f00",
+                  "width": 47,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.Rectangle",
+                "version": 3,
+                "id": "9ef8383a-2a7f-8b3f-863b-08d019b86a60",
+                "properties": {
+                  "width": 480,
+                  "height": 479,
+                  "left": 695.0001523048436,
+                  "top": 165,
+                  "backgroundBrush.value": "rgba(158,158,255,1)",
+                  "backgroundBrush.type": "color",
+                  "backgroundBrush.lineWidth": 0,
+                  "backgroundBrush.__type__": "sketch.framework.Brush"
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "f94e3bb5-0701-a70a-9e0e-17510b727720",
+                "properties": {
+                  "name": "Asset [02a38b9d-0142-07ca-e167-f3a40bd238f3]",
+                  "left": 695.0001523048436,
+                  "top": 165,
+                  "templateId": "a12dcb1c-0825-5c64-1386-6a9b298668e2",
+                  "width": 480,
+                  "height": 479
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "1777270c-ac76-3c38-c7df-a897ed870dd4",
+                "properties": {
+                  "name": "Asset [5e36e87c-9329-231b-1546-32762ad2bd16]",
+                  "left": 1127.0001523048436,
+                  "top": 596,
+                  "templateId": "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "33628eb6-23fd-2198-d640-03d795033f42",
+                "properties": {
+                  "name": null,
+                  "left": 695.0001523048436,
+                  "top": 164,
+                  "templateId": "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "aeee06d3-1c64-1f9f-4def-1ae5d4671fe1",
+                "properties": {
+                  "name": null,
+                  "left": 1127.0001523048436,
+                  "top": 164,
+                  "templateId": "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "46446635-fc0a-a42a-88e0-4dd74f919696",
+                "properties": {
+                  "name": null,
+                  "left": 934.0001523048436,
+                  "top": 452,
+                  "templateId": "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "99e61993-f1a2-f748-3b01-408cb0ffa3b2",
+                "properties": {
+                  "name": null,
+                  "left": 790.0001523048436,
+                  "top": 452,
+                  "templateId": "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "5b9018c0-9c25-b23d-631f-eb4c1a9ad2ba",
+                "properties": {
+                  "name": null,
+                  "left": 839.0001523048436,
+                  "top": 357,
+                  "templateId": "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "8212aef5-7d2f-023d-565c-537e2a4c4614",
+                "properties": {
+                  "name": null,
+                  "left": 695.0001523048436,
+                  "top": 403,
+                  "templateId": "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "19c6ffe7-7d26-df35-a5c7-64f291256778",
+                "properties": {
+                  "name": "Asset [01c6f512-58c7-74cb-e47f-12dbd490f6fc]",
+                  "left": 695.0001523048436,
+                  "top": 502,
+                  "templateId": "1fdc8ae5-9f7b-9faa-01e0-0bdc06c14057",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "acb54168-21df-31ff-38a5-379d526a59f9",
+                "properties": {
+                  "name": "Asset [16667e1f-0a84-e762-9b0e-3642703d93ec]",
+                  "left": 1127.0001523048436,
+                  "top": 212,
+                  "templateId": "a989b6cf-b24b-ce93-4feb-036a4b3f4f00",
+                  "width": 47,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "3701cf03-a799-4f7c-192d-68971a01fe30",
+                "properties": {
+                  "name": "Asset [16667e1f-0a84-e762-9b0e-3642703d93ec]",
+                  "left": 1127.0001523048436,
+                  "top": 357,
+                  "templateId": "a989b6cf-b24b-ce93-4feb-036a4b3f4f00",
+                  "width": 47,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "cfdd0a24-a0ae-8e1c-27b3-2d2ac8cda7fa",
+                "properties": {
+                  "name": "Asset [16667e1f-0a84-e762-9b0e-3642703d93ec]",
+                  "left": 1127.0001523048436,
+                  "top": 308,
+                  "templateId": "a989b6cf-b24b-ce93-4feb-036a4b3f4f00",
+                  "width": 47,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "ec13427c-c3b1-a3ad-a49d-a66258528761",
+                "properties": {
+                  "name": "Asset [16667e1f-0a84-e762-9b0e-3642703d93ec]",
+                  "left": 1127.0001523048436,
+                  "top": 260,
+                  "templateId": "a989b6cf-b24b-ce93-4feb-036a4b3f4f00",
+                  "width": 47,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "6a736d5f-1891-488b-5a0a-d948afb52e85",
+                "properties": {
+                  "name": "Asset [16667e1f-0a84-e762-9b0e-3642703d93ec]",
+                  "left": 1127.0001523048436,
+                  "top": 404,
+                  "templateId": "a989b6cf-b24b-ce93-4feb-036a4b3f4f00",
+                  "width": 47,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "905fc67d-fec1-365a-7180-07ddaac19788",
+                "properties": {
+                  "name": "Asset [16667e1f-0a84-e762-9b0e-3642703d93ec]",
+                  "left": 696.0001523048436,
+                  "top": 452,
+                  "templateId": "a989b6cf-b24b-ce93-4feb-036a4b3f4f00",
+                  "width": 47,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "a4000f34-de87-82b5-460b-a7d3caa7f44a",
+                "properties": {
+                  "name": "Asset [16667e1f-0a84-e762-9b0e-3642703d93ec]",
+                  "left": 743.0001523048436,
+                  "top": 452,
+                  "templateId": "a989b6cf-b24b-ce93-4feb-036a4b3f4f00",
+                  "width": 47,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "77fbdef5-822a-ced0-b3d7-e28d91d395f1",
+                "properties": {
+                  "name": "Asset [16667e1f-0a84-e762-9b0e-3642703d93ec]",
+                  "left": 982.0001523048436,
+                  "top": 596,
+                  "templateId": "a989b6cf-b24b-ce93-4feb-036a4b3f4f00",
+                  "width": 48,
+                  "height": 48
+                },
+                "states": {
+                  "default": {
+                    "properties": {
+                      "width": 48
+                    }
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "fdfbd256-6baf-8566-9318-3edaeebe70d1",
+                "properties": {
+                  "name": "Asset [16667e1f-0a84-e762-9b0e-3642703d93ec]",
+                  "left": 1209.0001523048436,
+                  "top": 624,
+                  "templateId": "a989b6cf-b24b-ce93-4feb-036a4b3f4f00",
+                  "width": 20,
+                  "height": 20
+                },
+                "states": {
+                  "default": {
+                    "properties": {
+                      "width": 20,
+                      "height": 20
+                    }
+                  }
+                }
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "ee575675-06d5-ae01-be00-1e02f47eae19",
+                "properties": {
+                  "width": 20,
+                  "height": 100,
+                  "left": 1229.0001523048436,
+                  "top": 151,
+                  "backgroundBrush.value": "rgba(255,0,0,1)",
+                  "backgroundBrush.type": "color",
+                  "backgroundBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1229.0001523048436,
+                    "y": 151,
+                    "cp1x": 1229.0001523048436,
+                    "cp1y": 151,
+                    "cp2x": 1229.0001523048436,
+                    "cp2y": 151
+                  },
+                  {
+                    "x": 1249.0001523048436,
+                    "y": 151,
+                    "cp1x": 1249.0001523048436,
+                    "cp1y": 151,
+                    "cp2x": 1249.0001523048436,
+                    "cp2y": 151
+                  },
+                  {
+                    "x": 1249.0001523048436,
+                    "y": 251,
+                    "cp1x": 1249.0001523048436,
+                    "cp1y": 251,
+                    "cp2x": 1249.0001523048436,
+                    "cp2y": 251
+                  },
+                  {
+                    "x": 1229.0001523048436,
+                    "y": 251,
+                    "cp1x": 1229.0001523048436,
+                    "cp1y": 251,
+                    "cp2x": 1229.0001523048436,
+                    "cp2y": 251
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "d67b963e-77f7-c05e-8074-ac0a40965b6d",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1229.0001523048436,
+                  "top": 171,
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1229.0001523048436,
+                    "y": 171,
+                    "cp1x": 1229.0001523048436,
+                    "cp1y": 171,
+                    "cp2x": 1229.0001523048436,
+                    "cp2y": 171
+                  },
+                  {
+                    "x": 1249.0001523048436,
+                    "y": 171,
+                    "cp1x": 1249.0001523048436,
+                    "cp1y": 171,
+                    "cp2x": 1249.0001523048436,
+                    "cp2y": 171
+                  },
+                  {
+                    "x": 1249.0001523048436,
+                    "y": 191,
+                    "cp1x": 1249.0001523048436,
+                    "cp1y": 191,
+                    "cp2x": 1249.0001523048436,
+                    "cp2y": 191
+                  },
+                  {
+                    "x": 1229.0001523048436,
+                    "y": 191,
+                    "cp1x": 1229.0001523048436,
+                    "cp1y": 191,
+                    "cp2x": 1229.0001523048436,
+                    "cp2y": 191
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "ce7f0161-7fd5-0e2c-6e51-b050339e8a92",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1229.0001523048436,
+                  "top": 191,
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1229.0001523048436,
+                    "y": 191,
+                    "cp1x": 1229.0001523048436,
+                    "cp1y": 191,
+                    "cp2x": 1229.0001523048436,
+                    "cp2y": 191
+                  },
+                  {
+                    "x": 1249.0001523048436,
+                    "y": 191,
+                    "cp1x": 1249.0001523048436,
+                    "cp1y": 191,
+                    "cp2x": 1249.0001523048436,
+                    "cp2y": 191
+                  },
+                  {
+                    "x": 1249.0001523048436,
+                    "y": 211,
+                    "cp1x": 1249.0001523048436,
+                    "cp1y": 211,
+                    "cp2x": 1249.0001523048436,
+                    "cp2y": 211
+                  },
+                  {
+                    "x": 1229.0001523048436,
+                    "y": 211,
+                    "cp1x": 1229.0001523048436,
+                    "cp1y": 211,
+                    "cp2x": 1229.0001523048436,
+                    "cp2y": 211
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "caf7faac-36af-9692-5469-cb0729ebbe92",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1229.0001523048436,
+                  "top": 211,
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1229.0001523048436,
+                    "y": 211,
+                    "cp1x": 1229.0001523048436,
+                    "cp1y": 211,
+                    "cp2x": 1229.0001523048436,
+                    "cp2y": 211
+                  },
+                  {
+                    "x": 1249.0001523048436,
+                    "y": 211,
+                    "cp1x": 1249.0001523048436,
+                    "cp1y": 211,
+                    "cp2x": 1249.0001523048436,
+                    "cp2y": 211
+                  },
+                  {
+                    "x": 1249.0001523048436,
+                    "y": 231,
+                    "cp1x": 1249.0001523048436,
+                    "cp1y": 231,
+                    "cp2x": 1249.0001523048436,
+                    "cp2y": 231
+                  },
+                  {
+                    "x": 1229.0001523048436,
+                    "y": 231,
+                    "cp1x": 1229.0001523048436,
+                    "cp1y": 231,
+                    "cp2x": 1229.0001523048436,
+                    "cp2y": 231
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "907af6fc-6137-05c0-21a1-c0d8f5a370ca",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1229.0001523048436,
+                  "top": 231,
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1229.0001523048436,
+                    "y": 231,
+                    "cp1x": 1229.0001523048436,
+                    "cp1y": 231,
+                    "cp2x": 1229.0001523048436,
+                    "cp2y": 231
+                  },
+                  {
+                    "x": 1249.0001523048436,
+                    "y": 231,
+                    "cp1x": 1249.0001523048436,
+                    "cp1y": 231,
+                    "cp2x": 1249.0001523048436,
+                    "cp2y": 231
+                  },
+                  {
+                    "x": 1249.0001523048436,
+                    "y": 251.00000000000003,
+                    "cp1x": 1249.0001523048436,
+                    "cp1y": 251.00000000000003,
+                    "cp2x": 1249.0001523048436,
+                    "cp2y": 251.00000000000003
+                  },
+                  {
+                    "x": 1229.0001523048436,
+                    "y": 251.00000000000003,
+                    "cp1x": 1229.0001523048436,
+                    "cp1y": 251.00000000000003,
+                    "cp2x": 1229.0001523048436,
+                    "cp2y": 251.00000000000003
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "1aed2013-62de-70ba-5f4b-92d8b220eb2c",
+                "properties": {
+                  "width": 20,
+                  "height": 80,
+                  "left": 1266.0001523048436,
+                  "top": 152,
+                  "backgroundBrush.value": "rgba(69,69,69,1)",
+                  "backgroundBrush.type": "color",
+                  "backgroundBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1266.0001523048436,
+                    "y": 152,
+                    "cp1x": 1266.0001523048436,
+                    "cp1y": 152,
+                    "cp2x": 1266.0001523048436,
+                    "cp2y": 152
+                  },
+                  {
+                    "x": 1286.0001523048436,
+                    "y": 152,
+                    "cp1x": 1286.0001523048436,
+                    "cp1y": 152,
+                    "cp2x": 1286.0001523048436,
+                    "cp2y": 152
+                  },
+                  {
+                    "x": 1286.0001523048436,
+                    "y": 232,
+                    "cp1x": 1286.0001523048436,
+                    "cp1y": 232,
+                    "cp2x": 1286.0001523048436,
+                    "cp2y": 232
+                  },
+                  {
+                    "x": 1266.0001523048436,
+                    "y": 232,
+                    "cp1x": 1266.0001523048436,
+                    "cp1y": 232,
+                    "cp2x": 1266.0001523048436,
+                    "cp2y": 232
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "6e85b744-2471-5d49-a0b5-b45a4315fa17",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1266.0001523048436,
+                  "top": 152,
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1266.0001523048436,
+                    "y": 152,
+                    "cp1x": 1266.0001523048436,
+                    "cp1y": 152,
+                    "cp2x": 1266.0001523048436,
+                    "cp2y": 152
+                  },
+                  {
+                    "x": 1286.0001523048436,
+                    "y": 152,
+                    "cp1x": 1286.0001523048436,
+                    "cp1y": 152,
+                    "cp2x": 1286.0001523048436,
+                    "cp2y": 152
+                  },
+                  {
+                    "x": 1286.0001523048436,
+                    "y": 172,
+                    "cp1x": 1286.0001523048436,
+                    "cp1y": 172,
+                    "cp2x": 1286.0001523048436,
+                    "cp2y": 172
+                  },
+                  {
+                    "x": 1266.0001523048436,
+                    "y": 172,
+                    "cp1x": 1266.0001523048436,
+                    "cp1y": 172,
+                    "cp2x": 1266.0001523048436,
+                    "cp2y": 172
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "0e3644f8-3215-3d7b-2647-5745502dcc20",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1266.0001523048436,
+                  "top": 172,
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1266.0001523048436,
+                    "y": 172,
+                    "cp1x": 1266.0001523048436,
+                    "cp1y": 172,
+                    "cp2x": 1266.0001523048436,
+                    "cp2y": 172
+                  },
+                  {
+                    "x": 1286.0001523048436,
+                    "y": 172,
+                    "cp1x": 1286.0001523048436,
+                    "cp1y": 172,
+                    "cp2x": 1286.0001523048436,
+                    "cp2y": 172
+                  },
+                  {
+                    "x": 1286.0001523048436,
+                    "y": 192,
+                    "cp1x": 1286.0001523048436,
+                    "cp1y": 192,
+                    "cp2x": 1286.0001523048436,
+                    "cp2y": 192
+                  },
+                  {
+                    "x": 1266.0001523048436,
+                    "y": 192,
+                    "cp1x": 1266.0001523048436,
+                    "cp1y": 192,
+                    "cp2x": 1266.0001523048436,
+                    "cp2y": 192
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "41b03a05-28b9-655c-3f87-427d05561af1",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1266.0001523048436,
+                  "top": 192,
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1266.0001523048436,
+                    "y": 192,
+                    "cp1x": 1266.0001523048436,
+                    "cp1y": 192,
+                    "cp2x": 1266.0001523048436,
+                    "cp2y": 192
+                  },
+                  {
+                    "x": 1286.0001523048436,
+                    "y": 192,
+                    "cp1x": 1286.0001523048436,
+                    "cp1y": 192,
+                    "cp2x": 1286.0001523048436,
+                    "cp2y": 192
+                  },
+                  {
+                    "x": 1286.0001523048436,
+                    "y": 212,
+                    "cp1x": 1286.0001523048436,
+                    "cp1y": 212,
+                    "cp2x": 1286.0001523048436,
+                    "cp2y": 212
+                  },
+                  {
+                    "x": 1266.0001523048436,
+                    "y": 212,
+                    "cp1x": 1266.0001523048436,
+                    "cp1y": 212,
+                    "cp2x": 1266.0001523048436,
+                    "cp2y": 212
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "08fe6815-9393-4667-c406-8fcceddf8c32",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1266.0001523048436,
+                  "top": 212,
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1266.0001523048436,
+                    "y": 212,
+                    "cp1x": 1266.0001523048436,
+                    "cp1y": 212,
+                    "cp2x": 1266.0001523048436,
+                    "cp2y": 212
+                  },
+                  {
+                    "x": 1286.0001523048436,
+                    "y": 212,
+                    "cp1x": 1286.0001523048436,
+                    "cp1y": 212,
+                    "cp2x": 1286.0001523048436,
+                    "cp2y": 212
+                  },
+                  {
+                    "x": 1286.0001523048436,
+                    "y": 232,
+                    "cp1x": 1286.0001523048436,
+                    "cp1y": 232,
+                    "cp2x": 1286.0001523048436,
+                    "cp2y": 232
+                  },
+                  {
+                    "x": 1266.0001523048436,
+                    "y": 232,
+                    "cp1x": 1266.0001523048436,
+                    "cp1y": 232,
+                    "cp2x": 1266.0001523048436,
+                    "cp2y": 232
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "f269d4f9-f66f-32f0-472f-89d6b97c79b4",
+                "properties": {
+                  "width": 20,
+                  "height": 60,
+                  "left": 1298.0001523048436,
+                  "top": 156,
+                  "backgroundBrush.value": "rgba(69,69,69,1)",
+                  "backgroundBrush.type": "color",
+                  "backgroundBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1298.0001523048436,
+                    "y": 156,
+                    "cp1x": 1298.0001523048436,
+                    "cp1y": 156,
+                    "cp2x": 1298.0001523048436,
+                    "cp2y": 156
+                  },
+                  {
+                    "x": 1318.0001523048436,
+                    "y": 156,
+                    "cp1x": 1318.0001523048436,
+                    "cp1y": 156,
+                    "cp2x": 1318.0001523048436,
+                    "cp2y": 156
+                  },
+                  {
+                    "x": 1318.0001523048436,
+                    "y": 216,
+                    "cp1x": 1318.0001523048436,
+                    "cp1y": 216,
+                    "cp2x": 1318.0001523048436,
+                    "cp2y": 216
+                  },
+                  {
+                    "x": 1298.0001523048436,
+                    "y": 216,
+                    "cp1x": 1298.0001523048436,
+                    "cp1y": 216,
+                    "cp2x": 1298.0001523048436,
+                    "cp2y": 216
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "9dde5553-b765-1eb7-87d7-6084b9257e02",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1298.0001523048436,
+                  "top": 156,
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1298.0001523048436,
+                    "y": 156,
+                    "cp1x": 1298.0001523048436,
+                    "cp1y": 156,
+                    "cp2x": 1298.0001523048436,
+                    "cp2y": 156
+                  },
+                  {
+                    "x": 1318.0001523048436,
+                    "y": 156,
+                    "cp1x": 1318.0001523048436,
+                    "cp1y": 156,
+                    "cp2x": 1318.0001523048436,
+                    "cp2y": 156
+                  },
+                  {
+                    "x": 1318.0001523048436,
+                    "y": 176,
+                    "cp1x": 1318.0001523048436,
+                    "cp1y": 176,
+                    "cp2x": 1318.0001523048436,
+                    "cp2y": 176
+                  },
+                  {
+                    "x": 1298.0001523048436,
+                    "y": 176,
+                    "cp1x": 1298.0001523048436,
+                    "cp1y": 176,
+                    "cp2x": 1298.0001523048436,
+                    "cp2y": 176
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "5a73f146-0a20-ef66-4456-a2c4efd379bc",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1298.0001523048436,
+                  "top": 176,
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1298.0001523048436,
+                    "y": 176,
+                    "cp1x": 1298.0001523048436,
+                    "cp1y": 176,
+                    "cp2x": 1298.0001523048436,
+                    "cp2y": 176
+                  },
+                  {
+                    "x": 1318.0001523048436,
+                    "y": 176,
+                    "cp1x": 1318.0001523048436,
+                    "cp1y": 176,
+                    "cp2x": 1318.0001523048436,
+                    "cp2y": 176
+                  },
+                  {
+                    "x": 1318.0001523048436,
+                    "y": 196,
+                    "cp1x": 1318.0001523048436,
+                    "cp1y": 196,
+                    "cp2x": 1318.0001523048436,
+                    "cp2y": 196
+                  },
+                  {
+                    "x": 1298.0001523048436,
+                    "y": 196,
+                    "cp1x": 1298.0001523048436,
+                    "cp1y": 196,
+                    "cp2x": 1298.0001523048436,
+                    "cp2y": 196
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "a986fd3c-ff9e-488e-a47f-f26d1c38ccfb",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1298.0001523048436,
+                  "top": 196,
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1298.0001523048436,
+                    "y": 196,
+                    "cp1x": 1298.0001523048436,
+                    "cp1y": 196,
+                    "cp2x": 1298.0001523048436,
+                    "cp2y": 196
+                  },
+                  {
+                    "x": 1318.0001523048436,
+                    "y": 196,
+                    "cp1x": 1318.0001523048436,
+                    "cp1y": 196,
+                    "cp2x": 1318.0001523048436,
+                    "cp2y": 196
+                  },
+                  {
+                    "x": 1318.0001523048436,
+                    "y": 216,
+                    "cp1x": 1318.0001523048436,
+                    "cp1y": 216,
+                    "cp2x": 1318.0001523048436,
+                    "cp2y": 216
+                  },
+                  {
+                    "x": 1298.0001523048436,
+                    "y": 216,
+                    "cp1x": 1298.0001523048436,
+                    "cp1y": 216,
+                    "cp2x": 1298.0001523048436,
+                    "cp2y": 216
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "00d72268-6ba5-a0e9-a06a-0e3d73d899dc",
+                "properties": {
+                  "width": 20,
+                  "height": 40,
+                  "left": 1270.0001523048436,
+                  "top": 254,
+                  "backgroundBrush.value": "rgba(255,0,0,1)",
+                  "backgroundBrush.type": "color",
+                  "backgroundBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1270.0001523048436,
+                    "y": 254,
+                    "cp1x": 1270.0001523048436,
+                    "cp1y": 254,
+                    "cp2x": 1270.0001523048436,
+                    "cp2y": 254
+                  },
+                  {
+                    "x": 1290.0001523048436,
+                    "y": 254,
+                    "cp1x": 1290.0001523048436,
+                    "cp1y": 254,
+                    "cp2x": 1290.0001523048436,
+                    "cp2y": 254
+                  },
+                  {
+                    "x": 1290.0001523048436,
+                    "y": 293.99999999999994,
+                    "cp1x": 1290.0001523048436,
+                    "cp1y": 293.99999999999994,
+                    "cp2x": 1290.0001523048436,
+                    "cp2y": 293.99999999999994
+                  },
+                  {
+                    "x": 1270.0001523048436,
+                    "y": 293.99999999999994,
+                    "cp1x": 1270.0001523048436,
+                    "cp1y": 293.99999999999994,
+                    "cp2x": 1270.0001523048436,
+                    "cp2y": 293.99999999999994
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "141cad7b-814e-9e43-b78c-cd22547987aa",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1270.0001523048436,
+                  "top": 274,
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1270.0001523048436,
+                    "y": 274,
+                    "cp1x": 1270.0001523048436,
+                    "cp1y": 274,
+                    "cp2x": 1270.0001523048436,
+                    "cp2y": 274
+                  },
+                  {
+                    "x": 1290.0001523048436,
+                    "y": 274,
+                    "cp1x": 1290.0001523048436,
+                    "cp1y": 274,
+                    "cp2x": 1290.0001523048436,
+                    "cp2y": 274
+                  },
+                  {
+                    "x": 1290.0001523048436,
+                    "y": 294,
+                    "cp1x": 1290.0001523048436,
+                    "cp1y": 294,
+                    "cp2x": 1290.0001523048436,
+                    "cp2y": 294
+                  },
+                  {
+                    "x": 1270.0001523048436,
+                    "y": 294,
+                    "cp1x": 1270.0001523048436,
+                    "cp1y": 294,
+                    "cp2x": 1270.0001523048436,
+                    "cp2y": 294
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "9c6c6adc-1fb9-3009-b5b4-06e0d2a9f054",
+                "properties": {
+                  "width": 20,
+                  "height": 40,
+                  "left": 1312.0001523048436,
+                  "top": 254,
+                  "backgroundBrush.value": "rgba(69,69,69,1)",
+                  "backgroundBrush.type": "color",
+                  "backgroundBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1312.0001523048436,
+                    "y": 254,
+                    "cp1x": 1312.0001523048436,
+                    "cp1y": 254,
+                    "cp2x": 1312.0001523048436,
+                    "cp2y": 254
+                  },
+                  {
+                    "x": 1332.0001523048436,
+                    "y": 254,
+                    "cp1x": 1332.0001523048436,
+                    "cp1y": 254,
+                    "cp2x": 1332.0001523048436,
+                    "cp2y": 254
+                  },
+                  {
+                    "x": 1332.0001523048436,
+                    "y": 293.99999999999994,
+                    "cp1x": 1332.0001523048436,
+                    "cp1y": 293.99999999999994,
+                    "cp2x": 1332.0001523048436,
+                    "cp2y": 293.99999999999994
+                  },
+                  {
+                    "x": 1312.0001523048436,
+                    "y": 293.99999999999994,
+                    "cp1x": 1312.0001523048436,
+                    "cp1y": 293.99999999999994,
+                    "cp2x": 1312.0001523048436,
+                    "cp2y": 293.99999999999994
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "0cb8e8d3-d955-f64d-9d5d-ec73a902f5da",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1312.0001523048436,
+                  "top": 254,
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1312.0001523048436,
+                    "y": 254,
+                    "cp1x": 1312.0001523048436,
+                    "cp1y": 254,
+                    "cp2x": 1312.0001523048436,
+                    "cp2y": 254
+                  },
+                  {
+                    "x": 1332.0001523048436,
+                    "y": 254,
+                    "cp1x": 1332.0001523048436,
+                    "cp1y": 254,
+                    "cp2x": 1332.0001523048436,
+                    "cp2y": 254
+                  },
+                  {
+                    "x": 1332.0001523048436,
+                    "y": 274,
+                    "cp1x": 1332.0001523048436,
+                    "cp1y": 274,
+                    "cp2x": 1332.0001523048436,
+                    "cp2y": 274
+                  },
+                  {
+                    "x": 1312.0001523048436,
+                    "y": 274,
+                    "cp1x": 1312.0001523048436,
+                    "cp1y": 274,
+                    "cp2x": 1312.0001523048436,
+                    "cp2y": 274
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "46672335-1b41-430d-139e-09832cf21856",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1312.0001523048436,
+                  "top": 274,
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1312.0001523048436,
+                    "y": 274,
+                    "cp1x": 1312.0001523048436,
+                    "cp1y": 274,
+                    "cp2x": 1312.0001523048436,
+                    "cp2y": 274
+                  },
+                  {
+                    "x": 1332.0001523048436,
+                    "y": 274,
+                    "cp1x": 1332.0001523048436,
+                    "cp1y": 274,
+                    "cp2x": 1332.0001523048436,
+                    "cp2y": 274
+                  },
+                  {
+                    "x": 1332.0001523048436,
+                    "y": 294,
+                    "cp1x": 1332.0001523048436,
+                    "cp1y": 294,
+                    "cp2x": 1332.0001523048436,
+                    "cp2y": 294
+                  },
+                  {
+                    "x": 1312.0001523048436,
+                    "y": 294,
+                    "cp1x": 1312.0001523048436,
+                    "cp1y": 294,
+                    "cp2x": 1312.0001523048436,
+                    "cp2y": 294
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "27e6e1e3-e2cf-0aab-d5a5-bfec74f18367",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1225.0001523048436,
+                  "top": 266,
+                  "backgroundBrush.value": "rgba(69,69,69,1)",
+                  "backgroundBrush.type": "color",
+                  "backgroundBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1225.0001523048436,
+                    "y": 266,
+                    "cp1x": 1225.0001523048436,
+                    "cp1y": 266,
+                    "cp2x": 1225.0001523048436,
+                    "cp2y": 266
+                  },
+                  {
+                    "x": 1245.0001523048436,
+                    "y": 266,
+                    "cp1x": 1245.0001523048436,
+                    "cp1y": 266,
+                    "cp2x": 1245.0001523048436,
+                    "cp2y": 266
+                  },
+                  {
+                    "x": 1245.0001523048436,
+                    "y": 286,
+                    "cp1x": 1245.0001523048436,
+                    "cp1y": 286,
+                    "cp2x": 1245.0001523048436,
+                    "cp2y": 286
+                  },
+                  {
+                    "x": 1225.0001523048436,
+                    "y": 286,
+                    "cp1x": 1225.0001523048436,
+                    "cp1y": 286,
+                    "cp2x": 1225.0001523048436,
+                    "cp2y": 286
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "ff900b22-fd4d-7417-63bd-f09e909ddc7f",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1225.0001523048436,
+                  "top": 266,
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1225.0001523048436,
+                    "y": 266,
+                    "cp1x": 1225.0001523048436,
+                    "cp1y": 266,
+                    "cp2x": 1225.0001523048436,
+                    "cp2y": 266
+                  },
+                  {
+                    "x": 1245.0001523048436,
+                    "y": 266,
+                    "cp1x": 1245.0001523048436,
+                    "cp1y": 266,
+                    "cp2x": 1245.0001523048436,
+                    "cp2y": 266
+                  },
+                  {
+                    "x": 1245.0001523048436,
+                    "y": 286,
+                    "cp1x": 1245.0001523048436,
+                    "cp1y": 286,
+                    "cp2x": 1245.0001523048436,
+                    "cp2y": 286
+                  },
+                  {
+                    "x": 1225.0001523048436,
+                    "y": 286,
+                    "cp1x": 1225.0001523048436,
+                    "cp1y": 286,
+                    "cp2x": 1225.0001523048436,
+                    "cp2y": 286
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "d7bba54a-9c32-7976-06ba-0a3478228cb4",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1229.0001523048436,
+                  "top": 152,
+                  "borderBrush.value": "rgba(0,0,0,1)",
+                  "borderBrush.type": "color",
+                  "borderBrush.__type__": "sketch.framework.Brush",
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1229.0001523048436,
+                    "y": 152,
+                    "cp1x": 1229.0001523048436,
+                    "cp1y": 152,
+                    "cp2x": 1229.0001523048436,
+                    "cp2y": 152
+                  },
+                  {
+                    "x": 1249.0001523048436,
+                    "y": 152,
+                    "cp1x": 1249.0001523048436,
+                    "cp1y": 152,
+                    "cp2x": 1249.0001523048436,
+                    "cp2y": 152
+                  },
+                  {
+                    "x": 1249.0001523048436,
+                    "y": 172,
+                    "cp1x": 1249.0001523048436,
+                    "cp1y": 172,
+                    "cp2x": 1249.0001523048436,
+                    "cp2y": 172
+                  },
+                  {
+                    "x": 1229.0001523048436,
+                    "y": 172,
+                    "cp1x": 1229.0001523048436,
+                    "cp1y": 172,
+                    "cp2x": 1229.0001523048436,
+                    "cp2y": 172
+                  }
+                ]
+              },
+              {
+                "type": "sketch.ui.common.TextBlock",
+                "version": 2,
+                "id": "bd5f39a8-6cf6-777e-f55c-d1f96a78b2d7",
+                "properties": {
+                  "width": 236,
+                  "height": 67,
+                  "name": null,
+                  "left": 219.0001523048436,
+                  "top": 664,
+                  "text": "Your Board",
+                  "font.size": 65,
+                  "font.__type__": "sketch.framework.Font",
+                  "multiLine": true,
+                  "clipSelf": true
+                },
+                "tags": "Primitive,P"
+              },
+              {
+                "type": "sketch.ui.common.TextBlock",
+                "version": 2,
+                "id": "d1e745a1-9e91-5004-42cc-6d5fd703add7",
+                "properties": {
+                  "width": 357,
+                  "height": 67,
+                  "name": null,
+                  "left": 757.0001523048436,
+                  "top": 664,
+                  "text": "Opponent's Board",
+                  "font.size": 65,
+                  "font.__type__": "sketch.framework.Font",
+                  "multiLine": true,
+                  "clipSelf": true
+                },
+                "tags": "Primitive,P"
+              },
+              {
+                "type": "sketch.ui.common.TextBlock",
+                "version": 2,
+                "id": "12f7e874-ebf9-3e90-28f0-c0930003cce2",
+                "properties": {
+                  "width": 498,
+                  "height": 108,
+                  "name": null,
+                  "left": 469,
+                  "top": 6,
+                  "text": "Battleship",
+                  "textAlign": "center",
+                  "textVerticalAlign": "middle",
+                  "font.size": 120,
+                  "font.__type__": "sketch.framework.Font",
+                  "multiLine": true,
+                  "clipSelf": true
+                },
+                "tags": "Primitive,P"
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "eec6ebeb-d7e4-814a-368a-93b6d43a85d5",
+                "properties": {
+                  "name": "Asset [eec6ebeb-d7e4-814a-368a-93b6d43a85d5]",
+                  "left": 719.0001523048436,
+                  "top": 684,
+                  "templateId": "5a51fecf-d3fb-f416-a9d2-be7a22cfdfdf",
+                  "angle": 91,
+                  "width": 25,
+                  "height": 25
+                },
+                "states": {
+                  "default": {
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "52d6f470-fb36-9d8e-5f7e-e257b24a45f8",
+                "properties": {
+                  "name": "Asset [eec6ebeb-d7e4-814a-368a-93b6d43a85d5]",
+                  "left": 1209.0001523048436,
+                  "top": 661,
+                  "angle": 91,
+                  "templateId": "5a51fecf-d3fb-f416-a9d2-be7a22cfdfdf",
+                  "width": 20,
+                  "height": 20
+                },
+                "states": {
+                  "default": {
+                    "properties": {
+                      "width": 20,
+                      "height": 20
+                    }
+                  }
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "b4bdfbfc-6acf-ff33-5ea8-bd98aba893b1",
+                "properties": {
+                  "width": 182,
+                  "height": 32,
+                  "name": null,
+                  "left": 30.994364720786507,
+                  "top": 721,
+                  "text": "Players online: xx",
+                  "font.size": 37,
+                  "font.color.value": "rgba(0,0,0,1)",
+                  "font.color.type": "color",
+                  "font.color.lineWidth": 0,
+                  "font.color.__type__": "sketch.framework.Brush",
+                  "font.__type__": "sketch.framework.Font",
+                  "scaleWithFontSize": true
+                }
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "0d0f22bd-84c3-8a71-a68d-9b6898bffcf4",
+                "properties": {
+                  "name": null,
+                  "left": 1209.0001523048436,
+                  "top": 556.15437931948122,
+                  "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84",
+                  "width": 20,
+                  "height": 20
+                },
+                "states": {
+                  "default": {
+                    "properties": {
+                      "width": 20,
+                      "height": 20
+                    }
+                  }
+                }
+              },
+              {
+                "type": "sketch.ui.common.TextBlock",
+                "version": 2,
+                "id": "df6737cb-166e-eba6-3dfd-8e92e9d75cf7",
+                "properties": {
+                  "width": 99,
+                  "height": 177,
+                  "name": null,
+                  "left": 1239,
+                  "top": 557.03221247442025,
+                  "text": "Your ship\n\nMiss\n\nHit\n\nPlayer's turn",
+                  "font.family": "Arial",
+                  "font.__type__": "sketch.framework.Font",
+                  "multiLine": true,
+                  "clipSelf": true
+                },
+                "tags": "Primitive,P"
+              },
+              {
+                "type": "sketch.ui.common.Path",
+                "version": 2,
+                "id": "76cd06cb-5f93-04ea-d38d-c97d8bd0cd79",
+                "properties": {
+                  "width": 20,
+                  "height": 20,
+                  "left": 1209,
+                  "top": 590.03221247442025,
+                  "closed": true
+                },
+                "points": [
+                  {
+                    "x": 1209,
+                    "y": 590.03221247442025,
+                    "cp1x": 1209,
+                    "cp1y": 590.03221247442025,
+                    "cp2x": 1209,
+                    "cp2y": 590.03221247442025
+                  },
+                  {
+                    "x": 1229,
+                    "y": 590.03221247442025,
+                    "cp1x": 1229,
+                    "cp1y": 590.03221247442025,
+                    "cp2x": 1229,
+                    "cp2y": 590.03221247442025
+                  },
+                  {
+                    "x": 1229,
+                    "y": 610.03221247442025,
+                    "cp1x": 1229,
+                    "cp1y": 610.03221247442025,
+                    "cp2x": 1229,
+                    "cp2y": 610.03221247442025
+                  },
+                  {
+                    "x": 1209,
+                    "y": 610.03221247442025,
+                    "cp1x": 1209,
+                    "cp1y": 610.03221247442025,
+                    "cp2x": 1209,
+                    "cp2y": 610.03221247442025
+                  }
+                ]
+              },
+              {
+                "type": "sketch.framework.TemplatedElement",
+                "version": 1,
+                "id": "748f867e-1668-efc5-1f11-3528bd22796e",
+                "properties": {
+                  "name": null,
+                  "left": 45,
+                  "top": 33,
+                  "templateId": "ui.web.templates.ButtonTemplate",
+                  "showIcon": true,
+                  "width": 133,
+                  "height": 71,
+                  "text": "Back",
+                  "enabled": true,
+                  "iconSource.name": "arrow-left3",
+                  "iconSource.__type__": "sketch.framework.ImageSourceFont"
+                },
+                "states": {
+                  "default": {
+                    "properties": {
+                      "font.family": "TomsHandwritten",
+                      "font.size": 36,
+                      "font.lineHeight": 1.1,
+                      "font.italic": false,
+                      "font.bold": false,
+                      "font.underline": false,
+                      "font.color.value": "web.button.text",
+                      "font.color.type": "resource",
+                      "font.color.lineWidth": null,
+                      "font.color.__type__": "sketch.framework.Brush",
+                      "font.__type__": "sketch.framework.Font"
+                    }
+                  },
+                  "disabled": {
+                    "properties": {
+                      "font.color.value": "web.button.disabled.text",
+                      "font.color.type": "resource",
+                      "font.color.__type__": "sketch.framework.Brush",
+                      "font.__type__": "sketch.framework.Font"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "sketch.ui.common.Label",
+                "version": 3,
+                "id": "2821ea65-190b-88d9-4808-6e0ae2547e89",
+                "properties": {
+                  "width": 34,
+                  "height": 19,
+                  "name": null,
+                  "left": 77,
+                  "top": 172,
+                  "text": "Label",
+                  "scaleWithFontSize": true
+                }
+              }
+            ],
+            "panelProperties": {
+              "type": "sketch.ui.common.PortableDevicePanel",
+              "version": 1,
+              "id": "c43d3271-ce4f-d119-095f-c2cf28e942ed",
+              "properties": {
+                "width": 1366,
+                "height": 768,
+                "left": 1340,
+                "top": 760,
+                "clipSelf": true
+              }
+            }
+          }
+        ],
+        "isDeleted": false,
+        "isStoryBoard": false,
+        "groupId": "0fc31c2c-ee8b-3f96-fa65-9de0b6e4ddc1",
+        "screenType": "Browser"
+      }
+    ],
+    "resources": {
+      "templates": {
+        "a12dcb1c-0825-5c64-1386-6a9b298668e2": {
+          "type": "sketch.framework.Template",
+          "version": 1,
+          "id": "afa89f55-2291-70e4-af93-27482b0f4aec",
+          "properties": {
+            "name": "__template__",
+            "templateId": "a12dcb1c-0825-5c64-1386-6a9b298668e2"
+          },
+          "children": [
+            {
+              "type": "sketch.ui.charts.ChartContainer",
+              "version": 2,
+              "id": "d452ef76-65ca-b849-8519-abc959fea801",
+              "properties": {
+                "width": 480,
+                "height": 479,
+                "name": " [d3eb5dc6-d228-52fe-39b1-b0c2cbd7267c]",
+                "left": 0,
+                "top": 0,
+                "opacity": 0.5,
+                "enableGroupLocking": true,
+                "horizontalLines": 9,
+                "verticalLines": 9
+              },
+              "children": []
+            }
+          ],
+          "bindings": [],
+          "customProperties": [],
+          "defaultPropertyValues": [
+            {
+              "name": "width",
+              "value": 480
+            },
+            {
+              "name": "height",
+              "value": 479
+            },
+            {
+              "name": "visible",
+              "value": true
+            },
+            {
+              "name": "opacity",
+              "value": 1
+            },
+            {
+              "name": "angle",
+              "value": 0
+            },
+            {
+              "name": "anchor",
+              "value": {
+                "type": "sketch.framework.Anchor",
+                "properties": {
+                  "left": true,
+                  "top": true,
+                  "right": false,
+                  "bottom": false,
+                  "__type__": "sketch.framework.Anchor"
+                }
+              }
+            },
+            {
+              "name": "pageLink",
+              "value": null
+            },
+            {
+              "name": "backgroundBrush",
+              "value": {
+                "type": "sketch.framework.Brush",
+                "properties": {
+                  "value": null,
+                  "type": null,
+                  "lineWidth": 0,
+                  "__type__": "sketch.framework.Brush"
+                }
+              }
+            },
+            {
+              "name": "borderBrush",
+              "value": {
+                "type": "sketch.framework.Brush",
+                "properties": {
+                  "value": null,
+                  "type": null,
+                  "lineWidth": 0,
+                  "__type__": "sketch.framework.Brush"
+                }
+              }
+            },
+            {
+              "name": "borderWidth",
+              "value": 1
+            },
+            {
+              "name": "cornerRadius",
+              "value": {
+                "type": "sketch.framework.QuadAndLock",
+                "properties": {
+                  "bottomLeft": 0,
+                  "bottomRight": 0,
+                  "upperLeft": 0,
+                  "upperRight": 0,
+                  "locked": true,
+                  "__type__": "sketch.framework.QuadAndLock"
+                }
+              }
+            },
+            {
+              "name": "scaleContent",
+              "value": false
+            },
+            {
+              "name": "states",
+              "value": {
+                "default": {
+                  "Root": {
+                    "width": 480,
+                    "height": 479
+                  },
+                  " [d3eb5dc6-d228-52fe-39b1-b0c2cbd7267c]": {
+                    "name": " [d3eb5dc6-d228-52fe-39b1-b0c2cbd7267c]"
+                  }
+                }
+              }
+            }
+          ],
+          "persistentFields": [
+            {
+              "name": "compositeElement",
+              "value": null
+            }
+          ],
+          "propertyCombinations": null
+        },
+        "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84": {
+          "type": "sketch.framework.Template",
+          "version": 1,
+          "id": "9d2468fa-5eaf-362c-f639-04a906a8882f",
+          "properties": {
+            "name": "__template__",
+            "templateId": "cd8e4b05-2c89-b749-84d1-f89c4c7dbc84"
+          },
+          "children": [
+            {
+              "type": "sketch.ui.common.Path",
+              "version": 2,
+              "id": "caa4a582-4f44-8b1b-a1d3-f1f264f6a04e",
+              "properties": {
+                "width": 48,
+                "height": 48,
+                "name": "Path [541958d5-e258-cb15-05c0-53d8882b6bd3]",
+                "left": 0,
+                "top": 0,
+                "backgroundBrush.value": "rgba(0,0,0,1)",
+                "backgroundBrush.type": "color",
+                "backgroundBrush.lineWidth": 0,
+                "backgroundBrush.__type__": "sketch.framework.Brush",
+                "closed": true
+              },
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "cp1x": 0,
+                  "cp1y": 0,
+                  "cp2x": 0,
+                  "cp2y": 0
+                },
+                {
+                  "x": 48,
+                  "y": 0,
+                  "cp1x": 48,
+                  "cp1y": 0,
+                  "cp2x": 48,
+                  "cp2y": 0
+                },
+                {
+                  "x": 48,
+                  "y": 48,
+                  "cp1x": 48,
+                  "cp1y": 48,
+                  "cp2x": 48,
+                  "cp2y": 48
+                },
+                {
+                  "x": 0,
+                  "y": 48,
+                  "cp1x": 0,
+                  "cp1y": 48,
+                  "cp2x": 0,
+                  "cp2y": 48
+                }
+              ]
+            }
+          ],
+          "bindings": [],
+          "customProperties": [],
+          "defaultPropertyValues": [
+            {
+              "name": "width",
+              "value": 48
+            },
+            {
+              "name": "height",
+              "value": 48
+            },
+            {
+              "name": "visible",
+              "value": true
+            },
+            {
+              "name": "opacity",
+              "value": 1
+            },
+            {
+              "name": "pageLink",
+              "value": null
+            },
+            {
+              "name": "backgroundBrush",
+              "value": {
+                "type": "sketch.framework.Brush",
+                "properties": {
+                  "value": null,
+                  "type": null,
+                  "lineWidth": 0,
+                  "__type__": "sketch.framework.Brush"
+                }
+              }
+            },
+            {
+              "name": "borderBrush",
+              "value": {
+                "type": "sketch.framework.Brush",
+                "properties": {
+                  "value": null,
+                  "type": null,
+                  "lineWidth": 0,
+                  "__type__": "sketch.framework.Brush"
+                }
+              }
+            },
+            {
+              "name": "borderWidth",
+              "value": 1
+            },
+            {
+              "name": "cornerRadius",
+              "value": {
+                "type": "sketch.framework.QuadAndLock",
+                "properties": {
+                  "bottomLeft": 0,
+                  "bottomRight": 0,
+                  "upperLeft": 0,
+                  "upperRight": 0,
+                  "locked": true,
+                  "__type__": "sketch.framework.QuadAndLock"
+                }
+              }
+            },
+            {
+              "name": "scaleContent",
+              "value": false
+            },
+            {
+              "name": "states",
+              "value": {
+                "default": {
+                  "Root": {
+                    "width": 48,
+                    "height": 48
+                  },
+                  "Path [541958d5-e258-cb15-05c0-53d8882b6bd3]": {
+                    "name": "Path [541958d5-e258-cb15-05c0-53d8882b6bd3]"
+                  }
+                }
+              }
+            }
+          ],
+          "persistentFields": [
+            {
+              "name": "compositeElement",
+              "value": null
+            }
+          ],
+          "propertyCombinations": null
+        },
+        "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69": {
+          "type": "sketch.framework.Template",
+          "version": 1,
+          "id": "1b65b289-71ab-0433-8685-496854f012cd",
+          "properties": {
+            "name": "__template__",
+            "templateId": "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69"
+          },
+          "children": [
+            {
+              "type": "sketch.ui.common.Path",
+              "version": 2,
+              "id": "2617d289-2c87-d767-2fc4-500dc363fd5d",
+              "properties": {
+                "width": 48,
+                "height": 48,
+                "name": "Path [958162d4-ee3a-4cd6-e245-e0246ce8f180]",
+                "left": 0,
+                "top": 0,
+                "backgroundBrush.value": "rgba(255,255,255,1)",
+                "backgroundBrush.type": "color",
+                "backgroundBrush.__type__": "sketch.framework.Brush",
+                "closed": true
+              },
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "cp1x": 0,
+                  "cp1y": 0,
+                  "cp2x": 0,
+                  "cp2y": 0
+                },
+                {
+                  "x": 48,
+                  "y": 0,
+                  "cp1x": 48,
+                  "cp1y": 0,
+                  "cp2x": 48,
+                  "cp2y": 0
+                },
+                {
+                  "x": 48,
+                  "y": 48,
+                  "cp1x": 48,
+                  "cp1y": 48,
+                  "cp2x": 48,
+                  "cp2y": 48
+                },
+                {
+                  "x": 0,
+                  "y": 48,
+                  "cp1x": 0,
+                  "cp1y": 48,
+                  "cp2x": 0,
+                  "cp2y": 48
+                }
+              ]
+            }
+          ],
+          "bindings": [],
+          "customProperties": [],
+          "defaultPropertyValues": [
+            {
+              "name": "width",
+              "value": 48
+            },
+            {
+              "name": "height",
+              "value": 48
+            },
+            {
+              "name": "visible",
+              "value": true
+            },
+            {
+              "name": "opacity",
+              "value": 1
+            },
+            {
+              "name": "pageLink",
+              "value": null
+            },
+            {
+              "name": "backgroundBrush",
+              "value": {
+                "type": "sketch.framework.Brush",
+                "properties": {
+                  "value": null,
+                  "type": null,
+                  "lineWidth": 0,
+                  "__type__": "sketch.framework.Brush"
+                }
+              }
+            },
+            {
+              "name": "borderBrush",
+              "value": {
+                "type": "sketch.framework.Brush",
+                "properties": {
+                  "value": null,
+                  "type": null,
+                  "lineWidth": 0,
+                  "__type__": "sketch.framework.Brush"
+                }
+              }
+            },
+            {
+              "name": "borderWidth",
+              "value": 1
+            },
+            {
+              "name": "cornerRadius",
+              "value": {
+                "type": "sketch.framework.QuadAndLock",
+                "properties": {
+                  "bottomLeft": 0,
+                  "bottomRight": 0,
+                  "upperLeft": 0,
+                  "upperRight": 0,
+                  "locked": true,
+                  "__type__": "sketch.framework.QuadAndLock"
+                }
+              }
+            },
+            {
+              "name": "scaleContent",
+              "value": false
+            },
+            {
+              "name": "states",
+              "value": {
+                "default": {
+                  "Root": {
+                    "width": 48,
+                    "height": 48
+                  },
+                  "Path [958162d4-ee3a-4cd6-e245-e0246ce8f180]": {
+                    "name": "Path [958162d4-ee3a-4cd6-e245-e0246ce8f180]",
+                    "backgroundBrush": {
+                      "value": "rgba(255,255,255,1)",
+                      "type": "color",
+                      "__type__": "sketch.framework.Brush"
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "persistentFields": [
+            {
+              "name": "compositeElement",
+              "value": null
+            }
+          ],
+          "propertyCombinations": null
+        },
+        "1fdc8ae5-9f7b-9faa-01e0-0bdc06c14057": {
+          "type": "sketch.framework.Template",
+          "version": 1,
+          "id": "b983d7cd-ac81-831e-d738-4dcea9a2f896",
+          "properties": {
+            "name": "__template__",
+            "templateId": "1fdc8ae5-9f7b-9faa-01e0-0bdc06c14057"
+          },
+          "children": [
+            {
+              "type": "sketch.framework.TemplatedElement",
+              "version": 1,
+              "id": "542bc435-ea0e-4261-8fcf-b4eecdeb61a5",
+              "properties": {
+                "name": "My Asset [b3cda9f5-45e5-13d0-47a4-1a52b4be8967]",
+                "left": 0,
+                "top": 0,
+                "backgroundBrush.lineWidth": 0,
+                "backgroundBrush.__type__": "sketch.framework.Brush",
+                "templateId": "bc3f6e1e-1e7c-e3e7-b1b2-101181e4ee69"
+              },
+              "states": {
+                "default": {
+                  "properties": {}
+                }
+              }
+            }
+          ],
+          "bindings": [],
+          "customProperties": [],
+          "defaultPropertyValues": [
+            {
+              "name": "width",
+              "value": 48
+            },
+            {
+              "name": "height",
+              "value": 48
+            },
+            {
+              "name": "visible",
+              "value": true
+            },
+            {
+              "name": "opacity",
+              "value": 1
+            },
+            {
+              "name": "pageLink",
+              "value": null
+            },
+            {
+              "name": "backgroundBrush",
+              "value": {
+                "type": "sketch.framework.Brush",
+                "properties": {
+                  "value": null,
+                  "type": null,
+                  "lineWidth": 0,
+                  "__type__": "sketch.framework.Brush"
+                }
+              }
+            },
+            {
+              "name": "borderBrush",
+              "value": {
+                "type": "sketch.framework.Brush",
+                "properties": {
+                  "value": null,
+                  "type": null,
+                  "lineWidth": 0,
+                  "__type__": "sketch.framework.Brush"
+                }
+              }
+            },
+            {
+              "name": "borderWidth",
+              "value": 1
+            },
+            {
+              "name": "cornerRadius",
+              "value": {
+                "type": "sketch.framework.QuadAndLock",
+                "properties": {
+                  "bottomLeft": 0,
+                  "bottomRight": 0,
+                  "upperLeft": 0,
+                  "upperRight": 0,
+                  "locked": true,
+                  "__type__": "sketch.framework.QuadAndLock"
+                }
+              }
+            },
+            {
+              "name": "scaleContent",
+              "value": false
+            },
+            {
+              "name": "states",
+              "value": {
+                "default": {
+                  "Root": {
+                    "width": 48,
+                    "height": 48,
+                    "backgroundBrush": {
+                      "lineWidth": 0,
+                      "__type__": "sketch.framework.Brush"
+                    }
+                  },
+                  "My Asset [b3cda9f5-45e5-13d0-47a4-1a52b4be8967]": {
+                    "name": "My Asset [b3cda9f5-45e5-13d0-47a4-1a52b4be8967]",
+                    "backgroundBrush": {
+                      "lineWidth": 0,
+                      "__type__": "sketch.framework.Brush"
+                    },
+                    "left": 0,
+                    "top": 0
+                  }
+                }
+              }
+            }
+          ],
+          "persistentFields": [
+            {
+              "name": "compositeElement",
+              "value": null
+            }
+          ],
+          "propertyCombinations": null
+        },
+        "a989b6cf-b24b-ce93-4feb-036a4b3f4f00": {
+          "type": "sketch.framework.Template",
+          "version": 1,
+          "id": "dff1850f-b53a-282a-bba4-8688a6050636",
+          "properties": {
+            "name": "__template__",
+            "templateId": "a989b6cf-b24b-ce93-4feb-036a4b3f4f00"
+          },
+          "children": [
+            {
+              "type": "sketch.ui.common.Path",
+              "version": 2,
+              "id": "5c65bf98-081f-3b64-7eea-6e246f220194",
+              "properties": {
+                "width": 48,
+                "height": 48,
+                "name": "Path [103d71cb-0a50-a3f7-bbb1-ad72191ac4f1]",
+                "left": 0,
+                "top": 0,
+                "backgroundBrush.value": "rgba(255,0,0,1)",
+                "backgroundBrush.type": "color",
+                "backgroundBrush.__type__": "sketch.framework.Brush",
+                "closed": true
+              },
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "cp1x": 0,
+                  "cp1y": 0,
+                  "cp2x": 0,
+                  "cp2y": 0
+                },
+                {
+                  "x": 47.999999999999993,
+                  "y": 0,
+                  "cp1x": 47.999999999999993,
+                  "cp1y": 0,
+                  "cp2x": 47.999999999999993,
+                  "cp2y": 0
+                },
+                {
+                  "x": 47.999999999999993,
+                  "y": 48,
+                  "cp1x": 47.999999999999993,
+                  "cp1y": 48,
+                  "cp2x": 47.999999999999993,
+                  "cp2y": 48
+                },
+                {
+                  "x": 0,
+                  "y": 48,
+                  "cp1x": 0,
+                  "cp1y": 48,
+                  "cp2x": 0,
+                  "cp2y": 48
+                }
+              ]
+            }
+          ],
+          "bindings": [],
+          "customProperties": [],
+          "defaultPropertyValues": [
+            {
+              "name": "width",
+              "value": 47
+            },
+            {
+              "name": "height",
+              "value": 48
+            },
+            {
+              "name": "visible",
+              "value": true
+            },
+            {
+              "name": "opacity",
+              "value": 1
+            },
+            {
+              "name": "pageLink",
+              "value": null
+            },
+            {
+              "name": "backgroundBrush",
+              "value": {
+                "type": "sketch.framework.Brush",
+                "properties": {
+                  "value": null,
+                  "type": null,
+                  "lineWidth": 0,
+                  "__type__": "sketch.framework.Brush"
+                }
+              }
+            },
+            {
+              "name": "borderBrush",
+              "value": {
+                "type": "sketch.framework.Brush",
+                "properties": {
+                  "value": null,
+                  "type": null,
+                  "lineWidth": 0,
+                  "__type__": "sketch.framework.Brush"
+                }
+              }
+            },
+            {
+              "name": "borderWidth",
+              "value": 1
+            },
+            {
+              "name": "cornerRadius",
+              "value": {
+                "type": "sketch.framework.QuadAndLock",
+                "properties": {
+                  "bottomLeft": 0,
+                  "bottomRight": 0,
+                  "upperLeft": 0,
+                  "upperRight": 0,
+                  "locked": true,
+                  "__type__": "sketch.framework.QuadAndLock"
+                }
+              }
+            },
+            {
+              "name": "scaleContent",
+              "value": false
+            },
+            {
+              "name": "states",
+              "value": {
+                "default": {
+                  "Root": {
+                    "width": 47,
+                    "height": 48
+                  },
+                  "Path [103d71cb-0a50-a3f7-bbb1-ad72191ac4f1]": {
+                    "name": "Path [103d71cb-0a50-a3f7-bbb1-ad72191ac4f1]",
+                    "width": 48
+                  }
+                }
+              }
+            }
+          ],
+          "persistentFields": [
+            {
+              "name": "compositeElement",
+              "value": null
+            }
+          ],
+          "propertyCombinations": null
+        },
+        "5a51fecf-d3fb-f416-a9d2-be7a22cfdfdf": {
+          "type": "sketch.framework.Template",
+          "version": 1,
+          "id": "848780cc-af27-a83e-9e4c-8315f0999c0d",
+          "properties": {
+            "name": "__template__",
+            "templateId": "5a51fecf-d3fb-f416-a9d2-be7a22cfdfdf"
+          },
+          "children": [
+            {
+              "type": "sketch.ui.common.Path",
+              "version": 2,
+              "id": "3cbe6eaa-6978-ce85-6183-b0ce823befb1",
+              "properties": {
+                "width": 25,
+                "height": 25,
+                "name": "Path",
+                "left": 0,
+                "top": 0,
+                "anchor.right": true,
+                "anchor.bottom": true,
+                "anchor.__type__": "sketch.framework.Anchor",
+                "backgroundBrush.value": "rgba(0,176,0,1)",
+                "backgroundBrush.type": "color",
+                "backgroundBrush.__type__": "sketch.framework.Brush",
+                "borderBrush.value": "rgba(0,176,0,1)",
+                "borderBrush.type": "color",
+                "borderBrush.__type__": "sketch.framework.Brush",
+                "closed": true
+              },
+              "points": [
+                {
+                  "x": -0.031465342215255987,
+                  "y": 25.09786821705427,
+                  "cp1x": -0.031465342215255987,
+                  "cp1y": 25.09786821705427,
+                  "cp2x": -0.031465342215255987,
+                  "cp2y": 25.09786821705427
+                },
+                {
+                  "x": 12.465593481314158,
+                  "y": 0.014534883720898506,
+                  "cp1x": 12.465593481314158,
+                  "cp1y": 0.014534883720898506,
+                  "cp2x": 12.465593481314158,
+                  "cp2y": 0.014534883720898506
+                },
+                {
+                  "x": 24.962836128373056,
+                  "y": 25.09786821705427,
+                  "cp1x": 24.962836128373056,
+                  "cp1y": 25.09786821705427,
+                  "cp2x": 24.962836128373056,
+                  "cp2y": 25.09786821705427
+                }
+              ]
+            }
+          ],
+          "bindings": [],
+          "customProperties": [],
+          "defaultPropertyValues": [
+            {
+              "name": "width",
+              "value": 25
+            },
+            {
+              "name": "height",
+              "value": 25
+            },
+            {
+              "name": "visible",
+              "value": true
+            },
+            {
+              "name": "opacity",
+              "value": 1
+            },
+            {
+              "name": "pageLink",
+              "value": null
+            },
+            {
+              "name": "backgroundBrush",
+              "value": {
+                "type": "sketch.framework.Brush",
+                "properties": {
+                  "value": null,
+                  "type": null,
+                  "lineWidth": 0,
+                  "__type__": "sketch.framework.Brush"
+                }
+              }
+            },
+            {
+              "name": "borderBrush",
+              "value": {
+                "type": "sketch.framework.Brush",
+                "properties": {
+                  "value": null,
+                  "type": null,
+                  "lineWidth": 0,
+                  "__type__": "sketch.framework.Brush"
+                }
+              }
+            },
+            {
+              "name": "borderWidth",
+              "value": 1
+            },
+            {
+              "name": "cornerRadius",
+              "value": {
+                "type": "sketch.framework.QuadAndLock",
+                "properties": {
+                  "bottomLeft": 0,
+                  "bottomRight": 0,
+                  "upperLeft": 0,
+                  "upperRight": 0,
+                  "locked": true,
+                  "__type__": "sketch.framework.QuadAndLock"
+                }
+              }
+            },
+            {
+              "name": "scaleContent",
+              "value": false
+            },
+            {
+              "name": "states",
+              "value": {
+                "default": {
+                  "Root": {
+                    "width": 25,
+                    "height": 25
+                  },
+                  "Path": {
+                    "backgroundBrush": {
+                      "value": "rgba(0,176,0,1)",
+                      "type": "color",
+                      "__type__": "sketch.framework.Brush"
+                    },
+                    "borderBrush": {
+                      "value": "rgba(0,176,0,1)",
+                      "type": "color",
+                      "__type__": "sketch.framework.Brush"
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "persistentFields": [
+            {
+              "name": "compositeElement",
+              "value": null
+            }
+          ],
+          "propertyCombinations": null
+        }
+      },
+      "colorPallet": []
+    },
+    "modelVersion": 5,
+    "version": "046f8dc3-d79e-4487-ad62-3b72e4ad710a",
+    "pageStatuses": [],
+    "projectType": "WebProject"
+  }
+}
