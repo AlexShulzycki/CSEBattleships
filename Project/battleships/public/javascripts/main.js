@@ -1,8 +1,11 @@
 window.onload = initScript;
 
+var playerBoard;
+var opponentBoard;
+
 function initScript(){
-  var playerBoard = document.getElementById('playerBoard');
-  var opponentBoard = document.getElementById('opponentBoard');
+  playerBoard = document.getElementById('playerBoard');
+  opponentBoard = document.getElementById('opponentBoard');
 
   for(var i = 0; i<20; i++){
 
