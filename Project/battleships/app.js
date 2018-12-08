@@ -25,7 +25,8 @@ server.listen(port);
 
 var gameMap;
 
-function Game(players){
+class Game{
+  constructor(players){
   this.players = players;
   this.state = "init";
   var tempboard =[[],[]];
@@ -48,15 +49,16 @@ function Game(players){
   this.idBoard = new Map();
   this.idBoard.set(players[0],this.boards[0]);
   this.idBoard.set(players[1],this.boards[1]);
+  }
   //helper functions
   //switch pair of coordinate pairs
-  this.switch = function(a,b,index){
+  switch(a,b,index){
       var temp = a[index];
       a[index] = b[index];
       b[index] = temp;
   }
   //identify type of ship, if any
-  this.identify = function(x,y){
+  identify(x,y){
     var res = [0,0];
     res[0] = Math.abs(x[0]-y[0]) + 1;
     res[1] = Math.abs(x[1]-y[1]) + 1;
@@ -87,7 +89,7 @@ function Game(players){
   }
 
   //verify that space is empty;
-  this.isEmpty = function(a,b,board){
+  isEmpty(a,b,board){
     //make sure order is correct to be fed into the loops
     if(b[0]<a[0]){
       this.switch(a,b,0);
@@ -98,17 +100,18 @@ function Game(players){
 
 
     var empty = true;
-    for(var x = a[0]; x<b[0];x++){
-      for(var y = a[1]; y<b[1]; y++){
+    for(var x = a[0]; x<=b[0];x++){
+      for(var y = a[1]; y<=b[1]; y++){
         if(this.boards[board][x][y]!= "water"){
-          empty = false;
+          return false;
         }
       }
     }
     return empty;
   }
   //create ship on game board
-  this.putShip = function(board, a, b){
+  putShip(board, a, b){
+    var boardObj = this.boards[board];
     //Types: Frigate (1*5), Sub(1*3), Carrier(2*5), Destroyer(1*4)
     //Switch to feed to loop
     if(b[0]<a[0]){
@@ -117,27 +120,36 @@ function Game(players){
     if(b[1]<a[1]){
       this.switch(a,b,1);
     }
+
+    var assign = function(board,name){
+      console.log(a[0]);
+      for(var x = a[0]; x<=b[0];x++){
+        for(var y = a[1]; y<=b[1]; y++){
+          board[x][y] = name;
+        }
+      }
+    }
+
     switch (this.identify(a,b)) {
       case "Frigate":
-
+          assign(boardObj,"Frigate");
+          console.log("frigate");
         break;
       case "Sub":
-
+          assign(boardObj,"Sub");
         break;
       case "Carrier":
-
+          assign(boardObj,"Carrier");
         break;
 
       case "Destroyer":
-
+          assign(boardObj,"Destroyer");
         break;
       default:
         console.log("unknown ship type");
     }
   }
-
 }
 
-//test
 var game = new Game([12,15]);
 console.log(game.boards[0][0][8]);
