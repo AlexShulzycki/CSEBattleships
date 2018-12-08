@@ -55,6 +55,36 @@ function Game(players){
       a[index] = b[index];
       b[index] = temp;
   }
+  //identify type of ship, if any
+  this.identify = function(x,y){
+    var res = [0,0];
+    res[0] = Math.abs(x[0]-y[0]) + 1;
+    res[1] = Math.abs(x[1]-y[1]) + 1;
+
+    var comparator = function(x,y){return ((res[0] == x)&&(res[1] == y))||((res[1] == x)&&(res[0] == y))};
+
+    x = 1; y = 5;
+    if(comparator(x,y)){
+      return "Frigate";
+    }
+
+    x = 1; y = 3;
+    if(comparator(x,y)){
+      return "Sub";
+    }
+
+    x = 2; y = 5;
+    if(comparator(x,y)){
+      return "Carrier";
+    }
+
+    x = 1; y = 4;
+    if(comparator(x,y)){
+      return "Destroyer"
+    }
+
+    return "Invalid Ship Type";
+  }
 
   //verify that space is empty;
   this.isEmpty = function(a,b,board){
@@ -69,18 +99,25 @@ function Game(players){
 
     var empty = true;
     for(var x = a[0]; x<b[0];x++){
-      for(var y = a[0]; y<b[1]; y++){
+      for(var y = a[1]; y<b[1]; y++){
         if(this.boards[board][x][y]!= "water"){
           empty = false;
         }
       }
     }
+    return empty;
   }
   //create ship on game board
-  this.validShips = function(id, a, b, type){
+  this.putShip = function(board, a, b){
     //Types: Frigate (1*5), Sub(1*3), Carrier(2*5), Destroyer(1*4)
-    var board = this.idBoard(id);
-    switch (type) {
+    //Switch to feed to loop
+    if(b[0]<a[0]){
+      this.switch(a,b,0);
+    }
+    if(b[1]<a[1]){
+      this.switch(a,b,1);
+    }
+    switch (this.identify(a,b)) {
       case "Frigate":
 
         break;
