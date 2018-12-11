@@ -29,11 +29,12 @@ class Game{
   constructor(players){
   this.players = players;
   this.state = "init";
+  this.health = [{},{}];
   var tempboard =[[],[]];
   for(var x = 0; x < 20; x++){
     var temprow = [];
     for(var y = 0; y<10; y++){
-      temprow.push("water");
+      temprow.push("Water");
     }
 
     if(x<10){
@@ -102,7 +103,7 @@ class Game{
     var empty = true;
     for(var x = a[0]; x<=b[0];x++){
       for(var y = a[1]; y<=b[1]; y++){
-        if(this.boards[board][x][y]!= "water"){
+        if(this.boards[board][x][y]!= "Water"){
           return false;
         }
       }
@@ -122,7 +123,6 @@ class Game{
     }
 
     var assign = function(board,name){
-      console.log(a[0]);
       for(var x = a[0]; x<=b[0];x++){
         for(var y = a[1]; y<=b[1]; y++){
           board[x][y] = name;
@@ -133,23 +133,78 @@ class Game{
     switch (this.identify(a,b)) {
       case "Frigate":
           assign(boardObj,"Frigate");
-          console.log("frigate");
+          this.health[board].frigate = 5;
         break;
       case "Sub":
           assign(boardObj,"Sub");
+          this.health[board].sub = 3;
         break;
       case "Carrier":
           assign(boardObj,"Carrier");
+          this.health[board].carrier = 10;
         break;
-
       case "Destroyer":
           assign(boardObj,"Destroyer");
+          this.health[board].destroyer = 4;
         break;
       default:
         console.log("unknown ship type");
+    }
+  }
+
+  fire(board,x,y){
+    if(((x<0)||(x>10))||((y<0)||(y>10))){
+      return "Invalid Shot";
+    }
+
+    switch(this.boards[board][x][y]){
+      case "Frigate":
+        this.health[board].frigate--;
+        this.boards[board][x][y] = "Hit";
+        if(this.health[board].frigate == 0){
+          return "Frigate Sunk";
+        }else{
+          return "Frigate Hit";
+        }
+        break;
+      case "Sub":
+        this.health[board].sub--;
+        this.boards[board][x][y] = "Hit";
+        if(this.health[board].sub == 0){
+          return "Sub Sunk";
+        }else{
+          return "Sub Hit";
+        }
+        break;
+      case "Carrier":
+        this.health[board].carrier--;
+        this.boards[board][x][y] = "Hit";
+        if(this.health[board].carrier == 0){
+          return "Carrier Sunk";
+        }else{
+          return "Carrier Hit";
+        }
+        break;
+      case "Destroyer":
+        this.health[board].destroyer--;
+        this.boards[board][x][y] = "Hit";
+        if(this.health[board].destroyer == 0){
+          return "Destroyer Sunk";
+        }else{
+          return "Destroyer Hit";
+        }
+        break;
+      case "Water":
+        this.boards[board][x][y] = "Miss";
+        return "Miss";
+        break;
+      case "Hit":
+        return "Invalid Shot";
+
     }
   }
 }
 
 var game = new Game([12,15]);
 console.log(game.boards[0][0][8]);
+game.putShip(0,[0,0],[0,4]);
