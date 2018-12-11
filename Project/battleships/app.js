@@ -15,14 +15,19 @@ app.get("/*", indexRouter);
 
 
 //websockets, eg game logic
-const wss = new websocket.Server({server});
+const wss = new websocket.Server({ server });
 
-wss.on("connection",function(){
+wss.on("connection",function(ws){
   console.log("connection established");
+  ws.on("message",function(msg){
+    console.log(msg);
+  });
+  ws.send("something");
 });
 
-
+//turn on the server!!
 server.listen(port);
 
+//testing
 var game1 = new Game([0,1]);
 console.log(game1.boards[0][0][0]);
