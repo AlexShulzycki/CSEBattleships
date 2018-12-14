@@ -3,8 +3,13 @@ class Game {
     this.players = players;
     //State: 0: Init, 1: Player 1 turn, 2: Player 2 turn, 3: Game over
     this.state = 0
-
-    this.health = [{}, {}];
+    this.health = [{},{}];
+    for(let i = 0; i<2; i++){
+      this.health[i].frigate = 0;
+      this.health[i].sub = 0;
+      this.health[i].carrier = 0;
+      this.health[i].destroyer = 0;
+    }
     var tempboard = [
       [],
       []
@@ -28,6 +33,10 @@ class Game {
     this.idBoard = new Map();
     this.idBoard.set(players[0], this.boards[0]);
     this.idBoard.set(players[1], this.boards[1]);
+
+    this.idBNum = new Map();
+    this.idBNum.set(players[0],0);
+    this.idBNum.set(players[1],1);
   }
   //helper functions
   //switch pair of coordinate pairs
@@ -87,7 +96,7 @@ class Game {
     var empty = true;
     for (var x = a[0]; x <= b[0]; x++) {
       for (var y = a[1]; y <= b[1]; y++) {
-        if (this.boards[board][x][y] != "Water") {
+        if (board[x][y] != "Water") {
           return false;
         }
       }
@@ -95,8 +104,9 @@ class Game {
     return empty;
   }
   //create ship on game board
-  putShip(board, a, b) {
-    var boardObj = this.boards[board];
+  putShip(id, a, b) {
+    var board = this.idBNum.get(id);
+    var boardObj = this.idBoard.get(id);
     //Types: Frigate (1*5), Sub(1*3), Carrier(2*5), Destroyer(1*4)
     //Switch to feed to loop
     if (b[0] < a[0]) {
@@ -113,6 +123,21 @@ class Game {
         }
       }
     }
+
+    var checkReady = function(){
+      let sum = 0;
+      for(let i = 0; i<2;i++){
+        let h = this.health[i];
+        sum+= h.frigate;
+        sum+= h.sub;
+        sum+= h.carrier;
+        sum+= h.destroyer;
+      }
+      if(sum == 44){
+        this.state = 1;
+      };
+    }
+
     switch (this.identify(a, b)) {
       case "Frigate":
         if (this.health[board].frigate == 5) {
@@ -147,47 +172,35 @@ class Game {
     }
   }
 
-  fire(board, x, y) {
+  fire(id, x, y) {
+    let board = this.idBNum.get(id);
     if (((x < 0) || (x > 10)) || ((y < 0) || (y > 10))) {
       return "Invalid Shot";
     }
 
+    let hit = function(name){
+      this.health[board][name]--;
+      this.boards[board][x][y] = "Hit";
+      if (this.health[board][name] == 0) {
+        return name + " Sunk";
+      } else {
+        return name + " Hit";
+      }
+
+    }
+
     switch (this.boards[board][x][y]) {
       case "Frigate":
-        this.health[board].frigate--;
-        this.boards[board][x][y] = "Hit";
-        if (this.health[board].frigate == 0) {
-          return "Frigate Sunk";
-        } else {
-          return "Frigate Hit";
-        }
+          hit("Frigate");
         break;
       case "Sub":
-        this.health[board].sub--;
-        this.boards[board][x][y] = "Hit";
-        if (this.health[board].sub == 0) {
-          return "Sub Sunk";
-        } else {
-          return "Sub Hit";
-        }
+        hit("Sub");
         break;
       case "Carrier":
-        this.health[board].carrier--;
-        this.boards[board][x][y] = "Hit";
-        if (this.health[board].carrier == 0) {
-          return "Carrier Sunk";
-        } else {
-          return "Carrier Hit";
-        }
+        hit("Carrier");
         break;
       case "Destroyer":
-        this.health[board].destroyer--;
-        this.boards[board][x][y] = "Hit";
-        if (this.health[board].destroyer == 0) {
-          return "Destroyer Sunk";
-        } else {
-          return "Destroyer Hit";
-        }
+        hit("Destroyer");
         break;
       case "Water":
         this.boards[board][x][y] = "Miss";
@@ -201,7 +214,7 @@ class Game {
 }
 
 var game = new Game([12, 15]);
-game.putShip(0, [0, 0], [0, 4]);
+game.putShip(12, [0, 0], [0, 4]);
 
 
 

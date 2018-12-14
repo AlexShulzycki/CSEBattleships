@@ -1,50 +1,86 @@
 var Game = require("./game");
 var gameManager = function() {
 
-  this.gameMap = new Map();
-  this.gameList = [];
-  this.waitQueue = []; //use pop and unshift to emulate queue
+	this.gameMap = new Map();
+	this.gameList = [];
+	this.waitQueue = []; //use pop and unshift to emulate queue
 
-  this.manage = function(id, request) {
-    switch (request) {
-      case "connect":
-        //connect to another player
-        this.match(id);
-        break;
-      case "place":
-        //placing ship
-        break;
-      case "fire":
-        //fire at position
-        break;
-      case "end":
-        //end game
-        this.end(id);
+	this.manage = function(id, request) {
+    let payload = request.substring(2);
+		switch (request.substring(0,1)) {
+			case "connect":
+				//connect to another player
+				return this.match(id);
+				break;
+			case "place":
+				//placing ship
+        return this.place(id, payload);
+				break;
+			case "fire":
+				//fire at position
+        return this.fire(id, payload);
+				break;
+			case "end":
+				//end game
+				return this.end(id);
+		}
+	}
+	this.match = function(id) {
+		this.waitQueue.unshift(id);
+		if (this.waitQueue.length >= 2) {
+			let players = [this.waitQueue.pop(), this.waitQueue.pop()];
+			let game = new Game(players);
+			let list = this.gameList;
+			list.push(game);
+			game.index = list.length - 1;
+			this.gameMap.set(players[0], list[game.index]);
+			this.gameMap.set(players[1], list[game.index]);
+		}
+    return "Finding match...";
+	}
+
+	this.end = function(id) {
+		let map = this.gameMap;
+		let game = map.get(id);
+		if (game instanceof Game) {
+			let players = game.players;
+			map.delete(players[0]);
+			map.delete(players[1]);
+			this.gameList.splice(game.index, 1);
+		}
+    return "Game ended";
+	}
+
+  this.place = function(id, payload){
+    let game = this.gameMap.get(id);
+    // a coordinates
+    let x = "";
+    let y = "";
+    let coords = [];
+    for(let i = 0; i<2; i++){
+      x = parseInt(payload.substring(4*i-2,4*i-1));
+      y = parseInt(payload.substring(4*i,4*i+1));
+      if(isNaN(x)||isNaN(y)){
+        // TODO: RETURN ERROR message
+        return "Error parsing coordinates, are you sure they're valid?";
+      }
+      coords[i] = [x,y];
+    }
+
+    game.putShip(id, coords[0], coords[1]);
+    return true;
+  }
+
+  this.fire = function(id, payload){
+    let game = this.gameMap.get(id);
+    if(isNaN(parseInt(payload))){
+      return "Invalid coordinates, try again?";
+    }else{
+        let x = payload.substring(0,1);
+        let y = payload.substring(1,2);
+        return game.fire(id, x, y);
     }
   }
-this.match = function(id){
-  this.waitQueue.unshift(id);
-  if (this.waitQueue.length >= 2) {
-    let players = [this.waitQueue.pop(), this.waitQueue.pop()];
-    let game = new Game(players);
-    let list = this.gameList;
-    list.push(game);
-    game.index = list.length - 1;
-    this.gameMap.set(players[0], list[game.index]);
-    this.gameMap.set(players[1], list[game.index]);
-  }
-}
-
-this.end = function(id){
-  let map = this.gameMap;
-  let game = map.get(id);
-  if(game instanceof Game){
-    let players = game.players;
-    map.delete(players[0]);
-    map.delete(players[1]);
-    this.gameList.splice(game.index,1);
-  }
-}
 
 }
 
