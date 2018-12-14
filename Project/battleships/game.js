@@ -1,7 +1,7 @@
 class Game {
   constructor(players) {
     this.players = players;
-    //State: 0: Init, 1: Player 1 turn, 2: Player 2 turn, 3: Game over
+    //State: 0: Init, 1: Player 1 turn, 2: Player 2 turn, 3: Player 1 wins 4: Player 2 wins
     this.state = 0
     this.health = [{},{}];
     for(let i = 0; i<2; i++){
@@ -10,6 +10,21 @@ class Game {
       this.health[i].carrier = 0;
       this.health[i].destroyer = 0;
     }
+
+    this.checkWin = function(obj){
+      for(let i = 0; i<2;i++){
+        let sum = 0;
+        sum+= obj.health[i].frigate;
+        sum+= obj.health[i].sub;
+        sum+= obj.health[i].carrier;
+        sum+= obj.health[i].destroyer;
+        if(sum == 0){
+          obj.state = obj.players[0]+3;
+          return true;
+        }
+      }
+    }
+
     var tempboard = [
       [],
       []
@@ -203,6 +218,11 @@ class Game {
     let hit = function(name, obj){
       obj.health[board][name]--;
       obj.boards[board][x][y] = "Hit";
+
+      if(obj.checkWin(obj)){
+        return "Player "+(obj.state-2)+" has won!";
+      }
+
       if (obj.health[board][name] == 0) {
         return name + " sunk!";
       } else {
