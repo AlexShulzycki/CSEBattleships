@@ -33,7 +33,15 @@ server.listen(port);
 gameManager.manage(1,"0");
 gameManager.manage(0,"0");
 //console.log(gameManager.gameList);
-console.log(gameManager.manage(0,"1 0004"));
+gameManager.manage(0,"1 0004");
+gameManager.manage(0,"1 1013");
+gameManager.manage(0,"1 2022");
+gameManager.manage(0,"1 3044");
+gameManager.manage(1,"1 0004");
+gameManager.manage(1,"1 1013");
+gameManager.manage(1,"1 2022");
+gameManager.manage(1,"1 3044");
 
 console.log(gameManager.manage(1,"2 00"));
+console.log(gameManager.manage(0,"2 00"));
 //console.log(gameManager.gameList[0].boards[0]);

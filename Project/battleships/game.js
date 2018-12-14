@@ -37,6 +37,10 @@ class Game {
     this.idBNum = new Map();
     this.idBNum.set(players[0],0);
     this.idBNum.set(players[1],1);
+
+    this.turnMap = new Map();
+    this.turnMap.set(players[0], 1);
+    this.turnMap.set(players[1], 2);
   }
   //helper functions
   //switch pair of coordinate pairs
@@ -125,17 +129,17 @@ class Game {
       }
     }
 
-    var checkReady = function(){
+    var checkReady = function(obj){
       let sum = 0;
       for(let i = 0; i<2;i++){
-        let h = this.health[i];
+        let h = obj.health[i];
         sum+= h.frigate;
         sum+= h.sub;
         sum+= h.carrier;
         sum+= h.destroyer;
       }
       if(sum == 44){
-        this.state = 1;
+        obj.state = 1;
       };
     }
 
@@ -146,6 +150,7 @@ class Game {
         }
         assign(boardObj, "Frigate");
         this.health[board].frigate = 5;
+        checkReady(this);
         break;
       case "Sub":
         if (this.health[board].sub == 3) {
@@ -153,6 +158,7 @@ class Game {
         }
         assign(boardObj, "Sub");
         this.health[board].sub = 3;
+        checkReady(this);
         break;
       case "Carrier":
         if (this.health[board].carrier == 10) {
@@ -160,6 +166,7 @@ class Game {
         }
         assign(boardObj, "Carrier");
         this.health[board].carrier = 10;
+        checkReady(this);
         break;
       case "Destroyer":
         if (this.health[board].destroyer == 4) {
@@ -167,6 +174,7 @@ class Game {
         }
         assign(boardObj, "Destroyer");
         this.health[board].destroyer = 4;
+        checkReady(this);
         break;
       default:
         console.log("unknown ship type");
@@ -175,6 +183,14 @@ class Game {
 
   fire(id, x, y) {
     let board = this.idBNum.get(id);
+    console.log(this.state);
+    if(this.turnMap.get(id) != this.state){return "Not your turn yet buckaroo"}
+    if(this.state == 1){
+      this.state = 2;
+    }else{
+      this.state == 1;
+    }
+
     if(board == 0){
       board = 1;
     }else{

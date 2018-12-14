@@ -4,10 +4,23 @@ var gameManager = function() {
 	this.gameMap = new Map();
 	this.gameList = [];
 	this.waitQueue = []; //use pop and unshift to emulate queue
+  this.checkInLine = function(id){
+    if(this.gameMap.get(id) === undefined){
+      return true;
+    }else{
+      return false;
+    }
+  }
 
 	this.manage = function(id, request) {
     let payload = request.substring(2);
     let choice = parseInt(request.substring(0,1));
+    if(choice == 0){
+      return this.match(id);
+    }
+    if(this.notInLine){
+      return "Get in the queue, bucko";
+    }
 		switch (choice) {
 			case 0:
 				//connect to another player
@@ -57,6 +70,9 @@ var gameManager = function() {
 
   this.place = function(id, payload){
     let game = this.gameMap.get(id);
+    if(game.state != 0){
+      return "Game has already started";
+    }
     // a coordinates
     let x = "";
     let y = "";
