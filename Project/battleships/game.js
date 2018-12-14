@@ -178,29 +178,29 @@ class Game {
       return "Invalid Shot";
     }
 
-    let hit = function(name){
-      this.health[board][name]--;
-      this.boards[board][x][y] = "Hit";
-      if (this.health[board][name] == 0) {
-        return name + " Sunk";
+    let hit = function(name, obj){
+      obj.health[board][name]--;
+      obj.boards[board][x][y] = "Hit";
+      if (obj.health[board][name] == 0) {
+        return name + " sunk!";
       } else {
-        return name + " Hit";
+        return name + " hit";
       }
 
     }
 
     switch (this.boards[board][x][y]) {
       case "Frigate":
-          hit("Frigate");
+        return  hit("frigate", this);
         break;
       case "Sub":
-        hit("Sub");
+        return hit("sub", this);
         break;
       case "Carrier":
-        hit("Carrier");
+        return hit("carrier", this);
         break;
       case "Destroyer":
-        hit("Destroyer");
+        return hit("destroyer", this);
         break;
       case "Water":
         this.boards[board][x][y] = "Miss";
@@ -215,7 +215,8 @@ class Game {
 
 var game = new Game([12, 15]);
 game.putShip(12, [0, 0], [0, 4]);
-
+console.log(game.fire(12, 0,0));
+console.log(game.health);
 
 
 //exports
