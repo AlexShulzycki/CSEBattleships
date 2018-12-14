@@ -4,7 +4,8 @@ var indexRouter = require("./routes/index");
 var port = process.argv[2];
 var app = express();
 var websocket = require("ws");
-var Game = require("./game.js");
+var Game = require("./game");
+var gameManager = require("./gameManager");
 
 
 app.use(express.static(__dirname + "/public"));
