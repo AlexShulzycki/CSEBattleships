@@ -7,22 +7,26 @@ var gameManager = function() {
 
 	this.manage = function(id, request) {
     let payload = request.substring(2);
-		switch (request.substring(0,1)) {
-			case "connect":
+    let choice = parseInt(request.substring(0,1));
+		switch (choice) {
+			case 0:
 				//connect to another player
 				return this.match(id);
 				break;
-			case "place":
+			case 1:
 				//placing ship
         return this.place(id, payload);
 				break;
-			case "fire":
+			case 2:
 				//fire at position
         return this.fire(id, payload);
 				break;
-			case "end":
+			case 3:
 				//end game
 				return this.end(id);
+        break;
+      default:
+        console.log("incorrect command");
 		}
 	}
 	this.match = function(id) {
@@ -58,15 +62,14 @@ var gameManager = function() {
     let y = "";
     let coords = [];
     for(let i = 0; i<2; i++){
-      x = parseInt(payload.substring(4*i-2,4*i-1));
-      y = parseInt(payload.substring(4*i,4*i+1));
+      x = parseInt(payload.substring(2*i,2*i +1));
+      y = parseInt(payload.substring(2*i+1,2*i+2));
       if(isNaN(x)||isNaN(y)){
         // TODO: RETURN ERROR message
         return "Error parsing coordinates, are you sure they're valid?";
       }
       coords[i] = [x,y];
     }
-
     game.putShip(id, coords[0], coords[1]);
     return true;
   }

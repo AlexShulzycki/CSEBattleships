@@ -105,6 +105,7 @@ class Game {
   }
   //create ship on game board
   putShip(id, a, b) {
+    //console.log("Putship: "+id+" at: "+x+" "+y);
     var board = this.idBNum.get(id);
     var boardObj = this.idBoard.get(id);
     //Types: Frigate (1*5), Sub(1*3), Carrier(2*5), Destroyer(1*4)
@@ -174,6 +175,11 @@ class Game {
 
   fire(id, x, y) {
     let board = this.idBNum.get(id);
+    if(board == 0){
+      board = 1;
+    }else{
+      board = 0;
+    }
     if (((x < 0) || (x > 10)) || ((y < 0) || (y > 10))) {
       return "Invalid Shot";
     }
@@ -212,12 +218,5 @@ class Game {
     }
   }
 }
-
-var game = new Game([12, 15]);
-game.putShip(12, [0, 0], [0, 4]);
-console.log(game.fire(12, 0,0));
-console.log(game.health);
-
-
 //exports
 module.exports = Game;
