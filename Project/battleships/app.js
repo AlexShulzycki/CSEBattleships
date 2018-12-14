@@ -32,3 +32,7 @@ server.listen(port);
 //testing
 var game1 = new Game([0,1]);
 console.log(game1.boards[0][0][0]);
+gameManager.manage("a","connect");
+gameManager.manage("b","connect");
+gameManager.manage("a","end");
+console.log(gameManager.gameMap);
