@@ -12,48 +12,56 @@ var gameManager = function() {
 		}
 	}
 
-	this.manage = function(id, request) {
-		let payload = request.substring(2);
+	this.manage = function(ws, request) {
+		let id = ws.id;
+		let payload = request.substring(1);
 		let choice = parseInt(request.substring(0, 1));
 		if (choice == 0) {
-			return this.match(id);
+			return this.match(ws);
 		}
 		if (this.notInLine) {
 			return "Get in the queue, bucko";
 		}
+
+		//codes to control the game, to be simply sent to the server as a string via websocket.
+		//Everything past that including ID's are done server side. Examples of valid codes are in ()
 		switch (choice) {
 			case 0:
-				//connect to another player
+				//connect to another player, just 0 (0)
 				return this.match(id);
 				break;
 			case 1:
-				//placing ship
+				//placing ship, 1 for the code, space, then x1y1x2y2 from corner to corner. (10105)
 				return this.place(id, payload);
 				break;
 			case 2:
-				//fire at position
+				//fire at position, 2 for the code, then xy (234)
 				return this.fire(id, payload);
 				break;
 			case 3:
-				//end game
+				//end game, simply send 3 (3). Game also ends on websocket disconnect automatically.
 				return this.end(id);
 				break;
 			default:
 				console.log("incorrect command");
 		}
 	}
-	this.match = function(id) {
-		this.waitQueue.unshift(id);
+	this.match = function(ws) {
+		let id = ws.id;
+		this.waitQueue.unshift(ws);
 		if (this.waitQueue.length >= 2) {
 			let players = [this.waitQueue.pop(), this.waitQueue.pop()];
 			let game = new Game(players);
 			let list = this.gameList;
 			list.push(game);
 			game.index = list.length - 1;
-			this.gameMap.set(players[0], list[game.index]);
-			this.gameMap.set(players[1], list[game.index]);
-		}
+			this.gameMap.set(players[0].id, list[game.index]);
+			this.gameMap.set(players[1].id, list[game.index]);
+			game.wsList[0].send("Game Found!");
+			return "Game Found!";
+		}else{
 		return "Finding match...";
+		}
 	}
 
 	this.end = function(id) {
@@ -65,13 +73,13 @@ var gameManager = function() {
 			map.delete(players[1]);
 			this.gameList.splice(game.index, 1);
 		}
-		return "Game ended";
+		game.sendAll("Game over!");
 	}
 
 	this.place = function(id, payload) {
 		let game = this.gameMap.get(id);
 		if (game.state != 0) {
-			return "Game has already started";
+			return "Too early/too late for that";
 		}
 		// a coordinates
 		let x = "";
@@ -86,8 +94,7 @@ var gameManager = function() {
 			}
 			coords[i] = [x, y];
 		}
-		game.putShip(id, coords[0], coords[1]);
-		return true;
+		return game.putShip(id, coords[0], coords[1]);
 	}
 
 	this.fire = function(id, payload) {

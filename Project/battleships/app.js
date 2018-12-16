@@ -20,36 +20,35 @@ const wss = new websocket.Server({
 	server
 });
 
+var connectID = 0;
+
 wss.on("connection", function(ws) {
 	console.log("connection established");
+	ws.id = connectID++;
+	console.log(ws.id);
+
+	//messaging
 	ws.on("message", function(msg) {
 		console.log(msg);
+		let response = gameManager.manage(ws, msg);
+		console.log(response);
+		if(typeof response === "boolean"){
+			ws.send(response.toString());
+		}else{
+			ws.send(response);
+		}
+
 	});
-	ws.send("something");
+	ws.on("close", function(cls){
+		console.log(cls+" ID "+ws.id+" disconnected..");
+		console.log(gameManager.gameMap.get(ws.id));
+		if(gameManager.gameMap.get(ws.id)!=undefined){
+			gameManager.end(ws.id);
+		}
+	});
 });
 
 //turn on the server!!
 server.listen(port);
 
 //testing
-gameManager.manage(1, "0");
-gameManager.manage(0, "0");
-
-gameManager.manage(0, "1 0004");
-gameManager.manage(0, "1 1013");
-gameManager.manage(0, "1 2022");
-gameManager.manage(0, "1 3044");
-gameManager.manage(1, "1 0004");
-gameManager.manage(1, "1 1013");
-gameManager.manage(1, "1 2022");
-gameManager.manage(1, "1 3044");
-
-console.log(gameManager.manage(1, "2 00"));
-gameManager.gameList[0].health[0] = {
-	frigate: 1,
-	destroyer: 0,
-	carrier: 0,
-	sub: 0
-};
-console.log(gameManager.manage(0, "2 00"));
-//console.log(gameManager.gameList[0].boards[0]);

@@ -1,6 +1,9 @@
 class Game {
 	constructor(players) {
-		this.players = players;
+		this.players = [undefined,undefined];
+		this.players[0] = players[0].id;
+		this.players[1] = players[1].id;
+		this.wsList = players;
 		//State: 0: Init, 1: Player 1 turn, 2: Player 2 turn, 3: Player 1 wins 4: Player 2 wins
 		this.state = 0
 		this.health = [{}, {}];
@@ -19,8 +22,9 @@ class Game {
 				sum += obj.health[i].carrier;
 				sum += obj.health[i].destroyer;
 				if (sum == 0) {
-					obj.state = obj.players[0] + 3;
-					return true;
+					obj.state = i+3;
+					this.sendAll("Player +"+ (i+1) +" has won!");
+					return "You won!";
 				}
 			}
 		}
@@ -46,18 +50,25 @@ class Game {
 
 		// mapping id to board
 		this.idBoard = new Map();
-		this.idBoard.set(players[0], this.boards[0]);
-		this.idBoard.set(players[1], this.boards[1]);
+		this.idBoard.set(this.players[0], this.boards[0]);
+		this.idBoard.set(this.players[1], this.boards[1]);
 
 		this.idBNum = new Map();
-		this.idBNum.set(players[0], 0);
-		this.idBNum.set(players[1], 1);
+		this.idBNum.set(this.players[0], 0);
+		this.idBNum.set(this.players[1], 1);
 
 		this.turnMap = new Map();
-		this.turnMap.set(players[0], 1);
-		this.turnMap.set(players[1], 2);
+		this.turnMap.set(this.players[0], 1);
+		this.turnMap.set(this.players[1], 2);
 	}
 	//helper functions
+	sendAll(msg){
+		console.log(wsList[0]);
+		this.wsList[0].send(msg);
+		this.wsList[1].send(msg);
+	}
+
+
 	//switch pair of coordinate pairs
 	switch (a, b, index) {
 		var temp = a[index];
@@ -124,7 +135,6 @@ class Game {
 	}
 	//create ship on game board
 	putShip(id, a, b) {
-		//console.log("Putship: "+id+" at: "+x+" "+y);
 		var board = this.idBNum.get(id);
 		var boardObj = this.idBoard.get(id);
 		//Types: Frigate (1*5), Sub(1*3), Carrier(2*5), Destroyer(1*4)
@@ -155,7 +165,9 @@ class Game {
 			}
 			if (sum == 44) {
 				obj.state = 1;
-			};
+				obj.sendAll("Game on!");
+			}
+			return "Ship placed";
 		}
 
 		switch (this.identify(a, b)) {
@@ -165,7 +177,7 @@ class Game {
 				}
 				assign(boardObj, "Frigate");
 				this.health[board].frigate = 5;
-				checkReady(this);
+				return checkReady(this);
 				break;
 			case "Sub":
 				if (this.health[board].sub == 3) {
@@ -173,7 +185,7 @@ class Game {
 				}
 				assign(boardObj, "Sub");
 				this.health[board].sub = 3;
-				checkReady(this);
+				return checkReady(this);
 				break;
 			case "Carrier":
 				if (this.health[board].carrier == 10) {
@@ -181,7 +193,7 @@ class Game {
 				}
 				assign(boardObj, "Carrier");
 				this.health[board].carrier = 10;
-				checkReady(this);
+				return checkReady(this);
 				break;
 			case "Destroyer":
 				if (this.health[board].destroyer == 4) {
@@ -189,10 +201,10 @@ class Game {
 				}
 				assign(boardObj, "Destroyer");
 				this.health[board].destroyer = 4;
-				checkReady(this);
+				return checkReady(this);
 				break;
 			default:
-				console.log("unknown ship type");
+				return("unknown ship type");
 		}
 	}
 
@@ -221,14 +233,12 @@ class Game {
 			obj.health[board][name]--;
 			obj.boards[board][x][y] = "Hit";
 
-			if (obj.checkWin(obj)) {
-				return "Player " + (obj.state - 2) + " has won!";
-			}
+			obj.checkWin(obj);
 
 			if (obj.health[board][name] == 0) {
-				return name + " sunk!";
+				this.sendAll(name + " sunk!");
 			} else {
-				return name + " hit";
+				this.sendAll(name + " hit!");
 			}
 
 		}
