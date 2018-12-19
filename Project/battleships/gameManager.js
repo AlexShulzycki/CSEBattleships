@@ -88,7 +88,7 @@ var gameManager = function() {
 				break;
 
 			case 4: //number of players online
-				return ws.send(this.gameList.length+" games in progress");
+				return ws.send(this.gameList.length*2);
 				break;
 			default:
 				console.log("incorrect command");

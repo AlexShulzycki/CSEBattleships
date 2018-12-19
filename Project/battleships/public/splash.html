@@ -6,7 +6,7 @@
         <link href="/stylesheets/style_splash.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Cinzel|
         Major+Mono+Display|Permanent+Marker|Righteous|Warnes" rel="stylesheet">
-        <script src="javascripts/websocc.js"></script>
+        <script> ws = new WebSocket("ws://localhost:3000"); ws.onmessage = function(event){document.getElementById("playNum").innerHTML = event.data}; window.onload = function(){ws.send("4")}</script>
     </head>
 
     <body>
@@ -30,8 +30,7 @@
 
         <footer>
             <p>
-                <b>Players online:</b> #
-                /*Need to replace # with actual number of online players*/
+                <b>Players online:</b> <span id="playNum"></span>
             </p>
         </footer>
     </body>

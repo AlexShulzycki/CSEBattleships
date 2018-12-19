@@ -1,11 +1,11 @@
 //websockets
 var webSocket = new WebSocket("ws://localhost:3000");
-console.log(webSocket);
 
-websocket.onmessage = function(event){
+webSocket.onmessage = function(event){
     let data = JSON.parse(event.data);
     console.log(data);
     switch (data.type) {
+
       case 0:
         break;
       default:
