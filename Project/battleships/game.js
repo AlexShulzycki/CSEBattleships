@@ -23,7 +23,7 @@ class Game {
 				sum += obj.health[i].destroyer;
 				if (sum == 0) {
 					obj.state = i+3;
-					this.sendAll({"type": 6, "winner": i+1});
+					this.sendAll(JSON.stringify({"type": 6, "winner": i+1}));
 				}
 			}
 		}
@@ -163,7 +163,7 @@ class Game {
 			}
 			if (sum == 44) {
 				obj.state = 1;
-				obj.sendAll({"type":1,"ready":true});
+				obj.sendAll(JSON.stringify({"type":1,"ready":true}));
 			}
 		}
 		let ship = this.identify(a, b);
@@ -206,14 +206,15 @@ class Game {
 
 		}
 		let websock = this.wsList[board];
-		websock.send({"type":1, "placed":ship, "location":[a,b], "ready":false });
+		websock.send(JSON.stringify({"type":1, "placed":ship, "location":[a,b]}));
 	}
 
 	fire(id, x, y) {
 		let board = this.idBNum.get(id);
+		let ws = this.wsList[this.idBNum.get(id)];
 		console.log(this.state);
 		if (this.turnMap.get(id) != this.state) {
-			return;
+			return ws.send(JSON.stringify({"type":5,"data":"Not your turn"}));
 		}
 		if (this.state == 1) {
 			this.state = 2;
@@ -227,7 +228,7 @@ class Game {
 			board = 0;
 		}
 		if (((x < 0) || (x > 10)) || ((y < 0) || (y > 10))) {
-			return;
+			return ws.send(JSON.stringify({"type":5,"data":"Invalid coordinates"}));
 		}
 
 		let hit = function(name, obj) {
@@ -237,9 +238,9 @@ class Game {
 			obj.checkWin(obj);
 
 			if (obj.health[board][name] == 0) {
-				this.sendAll({"type":2, "player":board, "location":[x,y], "hit":true, "sunk":true});
+				obj.sendAll(JSON.stringify({"type":2, "player":board, "location":[x,y], "hit":true, "sunk":true, "ship":name}));
 			} else {
-				this.sendAll({"type":2, "player":board, "location":[x,y], "hit":true, "sunk":false});
+				obj.sendAll(JSON.stringify({"type":2, "player":board, "location":[x,y], "hit":true, "sunk":false, "ship":name}));
 			}
 
 		}
@@ -259,10 +260,10 @@ class Game {
 				break;
 			case "Water":
 				this.boards[board][x][y] = "Miss";
-				this.sendAll({"type":2, "player":board, "location":[x,y], "hit":false, "sunk":false});
+				this.sendAll(JSON.stringify({"type":2, "player":board, "location":[x,y], "hit":false, "sunk":false}));
 				break;
 			case "Hit":
-				return;
+				ws.send(JSON.stringify({"type":5, "data":"Already tried."}))
 
 		}
 	}
