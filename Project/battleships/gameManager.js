@@ -11,16 +11,59 @@ var gameManager = function() {
 			return false;
 		}
 	}
+	this.respond = function(type, data, toID){
+		let game = this.gameMap.get(toID);
+		switch (type) {
+			case 0:
+				// game found, send player info, DEPENDENT ON PLAYER
+				let res =  {
+					"type": 0,
+					"game": data.queue,
+					"player": game.idBNum.get(toID),
+				};
+				break;
+			case 2: //hit or miss, i bet u never miss huh
+				let res = {
+					"type": 2,
+					"player": data.board,
+					"location": data.location,
+					"hit": data.hit,
+					"sunk": "truefalse"
+				};
+				break;
+			case 1: //placing Ship, DEPENDEND ON PLAYER
+				let res = {
+					"type": 1,
+					"placed": data.placed,
+					"location": data.location,
+					"ready": "true/false"
+				};
+				break;
+			case 4:
+				let res = {
+					"type": 4,
+					"players": this.gameList.length
+				}
+			case 5: //error
+			let res = {
+				"type": 5
+			};
+
+			case 6: //win template for now
+      let res = {
+				"type": 6,
+				"winner":toID
+			}
+		}
+	}
+
 
 	this.manage = function(ws, request) {
 		let id = ws.id;
 		let payload = request.substring(1);
 		let choice = parseInt(request.substring(0, 1));
-		if (choice == 0) {
-			return this.match(ws);
-		}
 		if (this.notInLine) {
-			return "Get in the queue, bucko";
+			ws.send(JSON.stringify({"type":5}));
 		}
 
 		//codes to control the game, to be simply sent to the server as a string via websocket.
@@ -28,7 +71,7 @@ var gameManager = function() {
 		switch (choice) {
 			case 0:
 				//connect to another player, just 0 (0)
-				return this.match(id);
+			  return this.match(ws);
 				break;
 			case 1:
 				//placing ship, 1 for the code, space, then x1y1x2y2 from corner to corner. (10105)
@@ -41,6 +84,10 @@ var gameManager = function() {
 			case 3:
 				//end game, simply send 3 (3). Game also ends on websocket disconnect automatically.
 				return this.end(id);
+				break;
+
+			case 4: //number of players online
+				return gameList.length;
 				break;
 			default:
 				console.log("incorrect command");
@@ -57,10 +104,10 @@ var gameManager = function() {
 			game.index = list.length - 1;
 			this.gameMap.set(players[0].id, list[game.index]);
 			this.gameMap.set(players[1].id, list[game.index]);
-			game.wsList[0].send("Game Found!");
-			return "Game Found!";
+			game.wsList[0].send(JSON.stringify({"type": 0, "game":true, "player":1 }));
+			game.wsList[1].send(JSON.stringify({"type": 0, "game":true, "player":2 }));
 		}else{
-		return "Finding match...";
+		ws.send(JSON.stringify({"type":0, "game":false}));
 		}
 	}
 
@@ -73,13 +120,12 @@ var gameManager = function() {
 			map.delete(players[1]);
 			this.gameList.splice(game.index, 1);
 		}
-		game.sendAll("Game over!");
 	}
 
 	this.place = function(id, payload) {
 		let game = this.gameMap.get(id);
 		if (game.state != 0) {
-			return "Too early/too late for that";
+			game.wsList[game.idBNum.get(id)].send({type:5});
 		}
 		// a coordinates
 		let x = "";
@@ -94,7 +140,7 @@ var gameManager = function() {
 			}
 			coords[i] = [x, y];
 		}
-		return game.putShip(id, coords[0], coords[1]);
+		game.putShip(id, coords[0], coords[1]);
 	}
 
 	this.fire = function(id, payload) {
@@ -104,7 +150,7 @@ var gameManager = function() {
 		} else {
 			let x = payload.substring(0, 1);
 			let y = payload.substring(1, 2);
-			return game.fire(id, x, y);
+			game.fire(id, x, y);
 		}
 	}
 

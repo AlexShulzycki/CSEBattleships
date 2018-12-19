@@ -29,16 +29,9 @@ wss.on("connection", function(ws) {
 
 	//messaging
 	ws.on("message", function(msg) {
-		console.log(msg);
-		let response = gameManager.manage(ws, msg);
-		console.log(response);
-		if(typeof response === "boolean"){
-			ws.send(response.toString());
-		}else{
-			ws.send(response);
-		}
+		gameManager.manage(ws, msg);
+});
 
-	});
 	ws.on("close", function(cls){
 		console.log(cls+" ID "+ws.id+" disconnected..");
 		console.log(gameManager.gameMap.get(ws.id));

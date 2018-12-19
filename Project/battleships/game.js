@@ -23,8 +23,7 @@ class Game {
 				sum += obj.health[i].destroyer;
 				if (sum == 0) {
 					obj.state = i+3;
-					this.sendAll("Player +"+ (i+1) +" has won!");
-					return "You won!";
+					this.sendAll({"type": 6, "winner": i+1});
 				}
 			}
 		}
@@ -48,7 +47,7 @@ class Game {
 		}
 		this.boards = tempboard;
 
-		// mapping id to board
+		// ping id to board
 		this.idBoard = new Map();
 		this.idBoard.set(this.players[0], this.boards[0]);
 		this.idBoard.set(this.players[1], this.boards[1]);
@@ -63,7 +62,6 @@ class Game {
 	}
 	//helper functions
 	sendAll(msg){
-		console.log(wsList[0]);
 		this.wsList[0].send(msg);
 		this.wsList[1].send(msg);
 	}
@@ -165,19 +163,19 @@ class Game {
 			}
 			if (sum == 44) {
 				obj.state = 1;
-				obj.sendAll("Game on!");
+				obj.sendAll({"type":1,"ready":true});
 			}
-			return "Ship placed";
 		}
+		let ship = this.identify(a, b);
 
-		switch (this.identify(a, b)) {
+		switch (ship) {
 			case "Frigate":
 				if (this.health[board].frigate == 5) {
 					return false;
 				}
 				assign(boardObj, "Frigate");
 				this.health[board].frigate = 5;
-				return checkReady(this);
+				checkReady(this);
 				break;
 			case "Sub":
 				if (this.health[board].sub == 3) {
@@ -185,7 +183,7 @@ class Game {
 				}
 				assign(boardObj, "Sub");
 				this.health[board].sub = 3;
-				return checkReady(this);
+				checkReady(this);
 				break;
 			case "Carrier":
 				if (this.health[board].carrier == 10) {
@@ -193,7 +191,7 @@ class Game {
 				}
 				assign(boardObj, "Carrier");
 				this.health[board].carrier = 10;
-				return checkReady(this);
+				checkReady(this);
 				break;
 			case "Destroyer":
 				if (this.health[board].destroyer == 4) {
@@ -201,18 +199,21 @@ class Game {
 				}
 				assign(boardObj, "Destroyer");
 				this.health[board].destroyer = 4;
-				return checkReady(this);
+				checkReady(this);
 				break;
 			default:
-				return("unknown ship type");
+				return false
+
 		}
+		let websock = this.wsList[board];
+		websock.send({"type":1, "placed":ship, "location":[a,b], "ready":false });
 	}
 
 	fire(id, x, y) {
 		let board = this.idBNum.get(id);
 		console.log(this.state);
 		if (this.turnMap.get(id) != this.state) {
-			return "Not your turn yet buckaroo"
+			return;
 		}
 		if (this.state == 1) {
 			this.state = 2;
@@ -226,7 +227,7 @@ class Game {
 			board = 0;
 		}
 		if (((x < 0) || (x > 10)) || ((y < 0) || (y > 10))) {
-			return "Invalid Shot";
+			return;
 		}
 
 		let hit = function(name, obj) {
@@ -236,9 +237,9 @@ class Game {
 			obj.checkWin(obj);
 
 			if (obj.health[board][name] == 0) {
-				this.sendAll(name + " sunk!");
+				this.sendAll({"type":2, "player":board, "location":[x,y], "hit":true, "sunk":true});
 			} else {
-				this.sendAll(name + " hit!");
+				this.sendAll({"type":2, "player":board, "location":[x,y], "hit":true, "sunk":false});
 			}
 
 		}
@@ -258,10 +259,10 @@ class Game {
 				break;
 			case "Water":
 				this.boards[board][x][y] = "Miss";
-				return "Miss";
+				this.sendAll({"type":2, "player":board, "location":[x,y], "hit":false, "sunk":false});
 				break;
 			case "Hit":
-				return "Invalid Shot";
+				return;
 
 		}
 	}
