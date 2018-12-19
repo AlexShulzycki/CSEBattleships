@@ -6,9 +6,9 @@ var gameManager = function() {
 	this.waitQueue = []; //use pop and unshift to emulate queue
 	this.checkInLine = function(id) {
 		if (this.gameMap.get(id) === undefined) {
-			return true;
-		} else {
 			return false;
+		} else {
+			return true;
 		}
 	}
 	this.respond = function(type, data, toID){
@@ -62,7 +62,8 @@ var gameManager = function() {
 		let id = ws.id;
 		let payload = request.substring(1);
 		let choice = parseInt(request.substring(0, 1));
-		if (this.checkInLine(id)&&(choice != 0)) {
+
+		if ((!this.checkInLine(id))&&((choice != 0)&&(choice != 4))) {
 			return ws.send(JSON.stringify({"type":5}));
 		}
 
@@ -87,7 +88,7 @@ var gameManager = function() {
 				break;
 
 			case 4: //number of players online
-				return gameList.length;
+				return ws.send(this.gameList.length+" games in progress");
 				break;
 			default:
 				console.log("incorrect command");
