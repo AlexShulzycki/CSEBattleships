@@ -62,8 +62,8 @@ var gameManager = function() {
 		let id = ws.id;
 		let payload = request.substring(1);
 		let choice = parseInt(request.substring(0, 1));
-		if (this.notInLine) {
-			ws.send(JSON.stringify({"type":5}));
+		if (this.checkInLine(id)&&(choice != 0)) {
+			return ws.send(JSON.stringify({"type":5}));
 		}
 
 		//codes to control the game, to be simply sent to the server as a string via websocket.
