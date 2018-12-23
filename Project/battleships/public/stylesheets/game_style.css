@@ -22,6 +22,7 @@ button:active {
     background: rgb(133, 133, 133);
     border: 2px solid black;
 }
+
 .battlefield_empty_cell, .battlefield_busy_cell{
     background: lightblue;
     padding: 0px;
@@ -43,16 +44,13 @@ button:active {
     font-weight: bold;
 }
 .battlefield_opponents {
-    float: right;
     margin-top: 0px;
-    position: absolute;
-    bottom: 50px;
-    left: 1100px;
+    bottom: 10%;
+    margin-left: 10%;
 }
 .battlefield_mine {
-    margin-left: 200px;
-    margin-top: 75px;
-    width: 447px;
+    margin-left: 10%;
+    margin-top: 10%;
 }
 footer {
     position: fixed;
@@ -110,6 +108,7 @@ table {
     -webkit-border-horizontal-spacing: 0px;
     -webkit-border-vertical-spacing: 0px;
 }
-.battlefield_mine .battlefield_gap {
+.battlefield_mine, .battlefield_gap, battlefield_opponents {
     padding: 0;
+    display: inline-block;
 }

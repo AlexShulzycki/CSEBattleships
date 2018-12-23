@@ -52,7 +52,7 @@ var gameManager = function() {
 			case 6: //win template for now
       let res = {
 				"type": 6,
-				"winner":this.idBNum.get(toID);
+				"winner":this.idBNum.get(toID)
 			}
 		}
 	}
