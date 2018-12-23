@@ -108,7 +108,7 @@ table {
     -webkit-border-horizontal-spacing: 0px;
     -webkit-border-vertical-spacing: 0px;
 }
-.battlefield_mine, .battlefield_gap, battlefield_opponents {
+.battlefield_mine, .battlefield_gap, .battlefield_opponents {
     padding: 0;
     display: inline-block;
 }
