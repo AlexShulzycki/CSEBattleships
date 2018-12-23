@@ -69,10 +69,14 @@ th {
     border-radius: 10px;
     border: 1px solid lightgrey;
     margin-top: 10px;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
-.notification_message {
-    margin-left: 10px;
+#notifications{
+  width: 70%;
+  margin-left: 15%;
 }
+
 .notifications:first-child {
     margin-top: 5px;
 }
