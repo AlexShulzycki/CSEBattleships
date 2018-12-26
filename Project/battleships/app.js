@@ -34,7 +34,6 @@ wss.on("connection", function(ws) {
 
 	ws.on("close", function(cls){
 		console.log(cls+" ID "+ws.id+" disconnected..");
-		console.log(gameManager.gameMap.get(ws.id));
 		if(gameManager.gameMap.get(ws.id)!=undefined){
 			gameManager.end(ws.id);
 		}

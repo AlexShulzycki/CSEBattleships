@@ -115,6 +115,11 @@ var gameManager = function() {
 	this.end = function(id) {
 		let map = this.gameMap;
 		let game = map.get(id);
+		if(game.wsList[game.idBNum.get(id)] == game.wsList[0]){
+			game.wsList[1].send(JSON.stringify({"type":6,"winner":"you"}));
+		}else{
+			game.wsList[0].send(JSON.stringify({"type":6,"winner":"you"}));
+		}
 		if (game instanceof Game) {
 			let players = game.players;
 			map.delete(players[0]);
