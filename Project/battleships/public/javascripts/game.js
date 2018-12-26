@@ -19,6 +19,34 @@ var info = {
   "connected": "Connected to server..."
 }
 
+//Mappings
+var alphaNum = new Map();
+alphaNum.set("A", 0);
+alphaNum.set("B", 1);
+alphaNum.set("C", 2);
+alphaNum.set("D", 3);
+alphaNum.set("E", 4);
+alphaNum.set("F", 5);
+alphaNum.set("G", 6);
+alphaNum.set("H", 7);
+alphaNum.set("I", 8);
+alphaNum.set("J", 9);
+
+var numAlpha = new Map();
+numAlpha.set(0, "A");
+numAlpha.set(1, "B");
+numAlpha.set(2, "C");
+numAlpha.set(3, "D");
+numAlpha.set(4, "E");
+numAlpha.set(5, "F");
+numAlpha.set(6, "G");
+numAlpha.set(7, "H");
+numAlpha.set(8, "I");
+numAlpha.set(9, "J");
+
+
+
+
 // init, including references to DOM
 window.onload = function() {
 	msg = document.getElementById("notifications");
