@@ -51,6 +51,9 @@ var webSockInit = function() {
           msg.innerHTML = info.owin;
 				}
 				break;
+      case 7: //enemy disconnected
+        msg.innerHTML  = info.odisconnect;
+        break;
 			default:
 
 

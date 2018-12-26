@@ -11,12 +11,12 @@ var gameManager = function() {
 			return true;
 		}
 	}
-	this.respond = function(type, data, toID){
+	this.respond = function(type, data, toID) {
 		let game = this.gameMap.get(toID);
 		switch (type) {
 			case 0:
 				// game found, send player info, DEPENDENT ON PLAYER
-				let res =  {
+				let res = {
 					"type": 0,
 					"game": data.queue,
 					"player": game.idBNum.get(toID),
@@ -45,15 +45,15 @@ var gameManager = function() {
 					"players": this.gameList.length
 				}
 			case 5: //error
-			let res = {
-				"type": 5
-			};
+				let res = {
+					"type": 5
+				};
 
 			case 6: //win template for now
-      let res = {
-				"type": 6,
-				"winner":this.idBNum.get(toID)
-			}
+				let res = {
+					"type": 6,
+					"winner": this.idBNum.get(toID)
+				}
 		}
 	}
 
@@ -63,8 +63,10 @@ var gameManager = function() {
 		let payload = request.substring(1);
 		let choice = parseInt(request.substring(0, 1));
 
-		if ((!this.checkInLine(id))&&((choice != 0)&&(choice != 4))) {
-			return ws.send(JSON.stringify({"type":5}));
+		if ((!this.checkInLine(id)) && ((choice != 0) && (choice != 4))) {
+			return ws.send(JSON.stringify({
+				"type": 5
+			}));
 		}
 
 		//codes to control the game, to be simply sent to the server as a string via websocket.
@@ -72,7 +74,7 @@ var gameManager = function() {
 		switch (choice) {
 			case 0:
 				//connect to another player, just 0 (0)
-			  return this.match(ws);
+				return this.match(ws);
 				break;
 			case 1:
 				//placing ship, 1 for the code, space, then x1y1x2y2 from corner to corner. (10105)
@@ -88,7 +90,7 @@ var gameManager = function() {
 				break;
 
 			case 4: //number of players online
-				return ws.send(this.gameList.length*2);
+				return ws.send(this.gameList.length * 2);
 				break;
 			default:
 				console.log("incorrect command");
@@ -105,20 +107,40 @@ var gameManager = function() {
 			game.index = list.length - 1;
 			this.gameMap.set(players[0].id, list[game.index]);
 			this.gameMap.set(players[1].id, list[game.index]);
-			game.wsList[0].send(JSON.stringify({"type": 0, "game":true, "player":1 }));
-			game.wsList[1].send(JSON.stringify({"type": 0, "game":true, "player":2 }));
-		}else{
-		ws.send(JSON.stringify({"type":0, "game":false}));
+			game.wsList[0].send(JSON.stringify({
+				"type": 0,
+				"game": true,
+				"player": 1
+			}));
+			game.wsList[1].send(JSON.stringify({
+				"type": 0,
+				"game": true,
+				"player": 2
+			}));
+		} else {
+			ws.send(JSON.stringify({
+				"type": 0,
+				"game": false
+			}));
 		}
 	}
 
 	this.end = function(id) {
 		let map = this.gameMap;
 		let game = map.get(id);
-		if(game.wsList[game.idBNum.get(id)] == game.wsList[0]){
-			game.wsList[1].send(JSON.stringify({"type":6,"winner":"you"}));
-		}else{
-			game.wsList[0].send(JSON.stringify({"type":6,"winner":"you"}));
+		let receiver = 0;
+		if (game.wsList[game.idBNum.get(id)] == game.wsList[0]) {
+			receiver = 1;
+		}
+		if ((game.state != 3) && (game.state != 4)) {
+			game.wsList[receiver].send(JSON.stringify({
+				"type": 7
+			}));
+		} else {
+			game.wsList[receiver].send(JSON.stringify({
+				"type": 6,
+				"winner": "you"
+			}));
 		}
 		if (game instanceof Game) {
 			let players = game.players;
@@ -131,7 +153,9 @@ var gameManager = function() {
 	this.place = function(id, payload) {
 		let game = this.gameMap.get(id);
 		if (game.state != 0) {
-			game.wsList[game.idBNum.get(id)].send({type:5});
+			game.wsList[game.idBNum.get(id)].send({
+				type: 5
+			});
 		}
 		// a coordinates
 		let x = "";
