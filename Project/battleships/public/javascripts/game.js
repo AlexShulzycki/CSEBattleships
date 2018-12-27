@@ -16,7 +16,7 @@ var info = {
 	"owin": "Your fleet has been obliterated. Better luck next time!",
 	"odisconnect": "Your opponent has disconnected. Uncaught bug in the server, or enemy cowering in fear? Your guess is as good as mine!",
 	"error": "Error ",
-  "connected": "Connected to server..."
+	"connected": "Connected to server..."
 }
 
 //Mappings
@@ -44,12 +44,41 @@ numAlpha.set(7, "H");
 numAlpha.set(8, "I");
 numAlpha.set(9, "J");
 
+//Dynamically create divs for the boards with a board object
+
+var Boards = function() {
+	let yTable = document.getElementById("yTable");
+	let oTable = document.getElementById("oTable");
+
+	this.mine = [];
+	this.opp = [];
+  //helper funtion to initialize board to object from html
+	let boardInit = function(array, tableElement) {
+		for (let i = 0; i < 10; i++) {
+			let tempRow = [];
+			for (let x = 0; x < 10; x++) {
+				tempRow.push(tableElement.querySelectorAll("tr")[i].querySelectorAll("td")[x]);
+			}
+			array.push(tempRow);
+		}
+	}
+
+  boardInit(this.mine, yTable);
+  boardInit(this.opp, oTable);
+
+  //send coordinates for verification
+  this.place = function(a,b){
+
+  }
+  //confirm placing of ship
+  this.confirm = function(a,b)
 
 
-
+}
 // init, including references to DOM
 window.onload = function() {
 	msg = document.getElementById("notifications");
 	msg.innerHTML = info.connecting;
 	webSockInit();
+	var boards = new Board();
 }
