@@ -164,9 +164,10 @@ var gameManager = function() {
 	this.place = function(id, payload) {
 		let game = this.gameMap.get(id);
 		if (game.state != 0) {
-			game.wsList[game.idBNum.get(id)].send({
-				type: 5
-			});
+			game.wsList[game.idBNum.get(id)].send(JSON.stringify({
+				"type": 5,
+				"data":"Not your turn"
+			}));
 		}
 		// a coordinates
 		let x = "";
@@ -177,11 +178,21 @@ var gameManager = function() {
 			y = parseInt(payload.substring(2 * i + 1, 2 * i + 2));
 			if (isNaN(x) || isNaN(y)) {
 				// TODO: RETURN ERROR message
-				return "Error parsing coordinates, are you sure they're valid?";
+				game.wsList[game.idBNum.get(id)].send(JSON.stringify({
+					"type": 5,
+					"data":"Invalid coordinates"
+
+				}));
 			}
 			coords[i] = [x, y];
 		}
-		game.putShip(id, coords[0], coords[1]);
+		if((game.putShip(id, coords[0], coords[1])) === false){
+			game.wsList[game.idBNum.get(id)].send(JSON.stringify({
+				"type": 5,
+				"data":"Already placed"
+
+			}));
+		}
 	}
 
 	this.fire = function(id, payload) {

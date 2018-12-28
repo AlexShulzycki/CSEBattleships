@@ -25,10 +25,16 @@ var webSockInit = function() {
 				break;
 			case 1: // placing
 				//confirm that it is placed
+
+
         let string = data.placed;
-        string =+ " placed at ";
+        string =+ " placed at (";
+				string =+ data.location[0][0] + ", " + data.location[0][1];
+				string =+ ") (" + data.location[1][0] + ", " + data.location[1][1];
+				string =+ ")";
         //finish
         msg.innerHTML = string;
+				board.place(data.location[0], data.location[1]);
 				break;
 			case 2:
 				if (data.player == player) {
@@ -39,7 +45,7 @@ var webSockInit = function() {
 				break;
 
 			case 5: //error
-				alert("Error: " + data.data);
+				msg.innerHTML = "Error: "+ data.data;
 				break;
 
 			case 6: //// win

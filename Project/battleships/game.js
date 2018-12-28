@@ -136,7 +136,7 @@ class Game {
 		var board = this.idBNum.get(id);
 		var boardObj = this.idBoard.get(id);
 		//Types: Frigate (1*5), Sub(1*3), Carrier(2*5), Destroyer(1*4)
-		//Switch to feed to loop
+		//Switch in order to feed to loop
 		if (b[0] < a[0]) {
 			this.switch(a, b, 0);
 		}
@@ -168,6 +168,7 @@ class Game {
 		}
 		let ship = this.identify(a, b);
 
+		//check whether already place, else place it
 		switch (ship) {
 			case "Frigate":
 				if (this.health[board].frigate == 5) {
