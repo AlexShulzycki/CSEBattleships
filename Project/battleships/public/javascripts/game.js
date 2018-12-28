@@ -67,19 +67,22 @@ var Boards = function() {
   boardInit(this.opp, oTable);
 
   //send coordinates for verification
+	this.confirm = function(a,b){
+
+	}
+
+	//place on the tiles
   this.place = function(a,b){
-
-
-
-
-		///coped from server, TODO implementation
-		var assign = function(board, name) {
+		let board = this.mine;
+		var assign = function(board, scope) {
 			for (var x = a[0]; x <= b[0]; x++) {
 				for (var y = a[1]; y <= b[1]; y++) {
-					//board[x][y] = name;
+					scope.tile("placed", board, x,y);
 				}
 			}
 		}
+
+		assign(board, this)
   }
   //confirm placing of ship
   this.confirm = function(a,b){
