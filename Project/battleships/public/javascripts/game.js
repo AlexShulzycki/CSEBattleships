@@ -75,6 +75,18 @@ var Boards = function() {
 
 	}
 
+	this.stats = function(write, brd, ship){
+		let board = document.getElementsByClassName("battlefield_stats")[brd];
+		let classname = ship + "Stat";
+		let healthElement = board.getElementsByClassName(classname)[0];
+
+		if(write != false){
+			healthElement.innerHTML = write;
+		}else {
+			return healthElement.innerHTML;
+		}
+	}
+
 
 }
 // init, including references to DOM
@@ -83,4 +95,5 @@ window.onload = function() {
 	msg.innerHTML = info.connecting;
 	webSockInit();
 	var boards = new Boards();
+	
 }
