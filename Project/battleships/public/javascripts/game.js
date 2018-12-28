@@ -69,10 +69,31 @@ var Boards = function() {
   //send coordinates for verification
   this.place = function(a,b){
 
+
+
+
+		///coped from server, TODO implementation
+		var assign = function(board, name) {
+			for (var x = a[0]; x <= b[0]; x++) {
+				for (var y = a[1]; y <= b[1]; y++) {
+					//board[x][y] = name;
+				}
+			}
+		}
   }
   //confirm placing of ship
   this.confirm = function(a,b){
 
+	}
+
+	this.tile = function(write, brd, x, y){
+		let tile = brd[x][y];
+
+		if(write != false){
+			tile.className = "battlefield_empty_cell " + write;
+		}else {
+			return tile.classList[1];
+		}
 	}
 
 	this.stats = function(write, brd, ship){
@@ -89,11 +110,13 @@ var Boards = function() {
 
 
 }
-// init, including references to DOM
+// inits
+var boards;
+
 window.onload = function() {
 	msg = document.getElementById("notifications");
 	msg.innerHTML = info.connecting;
 	webSockInit();
-	var boards = new Boards();
-	
+	boards = new Boards();
+
 }

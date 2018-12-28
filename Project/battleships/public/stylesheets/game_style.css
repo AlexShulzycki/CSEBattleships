@@ -135,3 +135,10 @@ table {
 .label{
   margin-top: 5%;
 }
+
+.hit{
+  background-color: red;
+}
+.placed{
+  background-color: black;
+}
