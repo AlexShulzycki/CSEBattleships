@@ -264,7 +264,7 @@ class Game {
 				this.sendAll(JSON.stringify({"type":2, "player":board, "location":[x,y], "hit":false, "sunk":false}));
 				break;
 			case "Hit":
-				ws.send(JSON.stringify({"type":5, "data":"Already tried."}))
+				ws.send(JSON.stringify({"type":5, "data":"Already tried. You miss a turn."}));
 
 		}
 	}

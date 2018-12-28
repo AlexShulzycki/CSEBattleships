@@ -25,7 +25,6 @@ var connectID = 0;
 wss.on("connection", function(ws) {
 	console.log("connection established");
 	ws.id = connectID++;
-	console.log(ws.id);
 
 	//messaging
 	ws.on("message", function(msg) {
@@ -34,7 +33,7 @@ wss.on("connection", function(ws) {
 
 	ws.on("close", function(cls){
 		console.log(cls+" ID "+ws.id+" disconnected..");
-		gameManager.end(ws.id);
+		gameManager.end(ws);
 	});
 });
 

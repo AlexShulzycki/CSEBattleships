@@ -129,18 +129,18 @@ var gameManager = function() {
 		let id = ws.id;
 		let map = this.gameMap;
 		let game = map.get(id);
-
 		//check if in game or just in queue
 		if(!(game instanceof Game)){
 			console.log("Removed from queue");
 			let index = this.waitQueue.indexOf(ws);
 			this.waitQueue.splice(index, 1);
+			console.log(this.waitQueue.length);
 			return;
 		}
 
 		//ending the game
 		let receiver = 0;
-		if (game.wsList[game.idBNum.get(id)] == game.wsList[0]) {
+		if (ws == game.wsList[0]) {
 			receiver = 1;
 		}
 		if ((game.state != 3) && (game.state != 4)) {
@@ -153,12 +153,10 @@ var gameManager = function() {
 				"winner": "you"
 			}));
 		}
-		if (game instanceof Game) {
 			let players = game.players;
 			map.delete(players[0]);
 			map.delete(players[1]);
 			this.gameList.splice(game.index, 1);
-		}
 	}
 
 	this.place = function(id, payload) {
@@ -190,7 +188,6 @@ var gameManager = function() {
 			game.wsList[game.idBNum.get(id)].send(JSON.stringify({
 				"type": 5,
 				"data":"Already placed"
-
 			}));
 		}
 	}
