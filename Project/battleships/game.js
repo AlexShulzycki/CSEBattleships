@@ -68,7 +68,7 @@ class Game {
 
 
 	//switch pair of coordinate pairs
-	switch (a, b, index) {
+	swetch (a, b, index) {
 		var temp = a[index];
 		a[index] = b[index];
 		b[index] = temp;
@@ -112,35 +112,30 @@ class Game {
 
 	//verify that space is empty;
 	isEmpty(a, b, board) {
-		var empty = true;
-		console.log(a);
-		console.log("emptyinint");
+		let empty = true;
 		for (var x = a[0]; x <= b[0]; x++) {
-			console.log("emtyfirstlooperino");
 			for (var y = a[1]; y <= b[1]; y++) {
-				console.log(board[x][y]);
 				if (board[x][y] != "Water") {
 					return false;
 				}
 			}
 		}
-		console.log("empty: "+ empty);
 		return true;
 	}
 	//create ship on game board
 	putShip(id, a, b) {
-		console.log(a);
 		var board = this.idBNum.get(id);
 		var boardObj = this.idBoard.get(id);
 		//Types: Frigate (1*5), Sub(1*3), Carrier(2*5), Destroyer(1*4)
 		//Switch in order to feed to loop
 		if (b[0] < a[0]) {
-			this.switch(a, b, 0);
+			this.swetch(a, b, 0);
 		}
 		if (b[1] < a[1]) {
-			this.switch(a, b, 1);
+			this.swetch(a, b, 1);
 		}
-		if(!this.isEmpty(board, a, b)){
+
+		if(!this.isEmpty(a, b, boardObj)){
 			return false;
 		}
 
