@@ -28,13 +28,13 @@ var webSockInit = function() {
 
 
         let string = data.placed;
-        string =+ " placed at (";
-				string =+ data.location[0][0] + ", " + data.location[0][1];
-				string =+ ") (" + data.location[1][0] + ", " + data.location[1][1];
-				string =+ ")";
+        string += " placed at (";
+				string += data.location[0][0] + ", " + data.location[0][1];
+				string += ") (" + data.location[1][0] + ", " + data.location[1][1];
+				string += ")";
         //finish
         msg.innerHTML = string;
-				board.place(data.location[0], data.location[1]);
+				boards.place(data.location[0], data.location[1]);
 				break;
 			case 2:
 				if (data.player == player) {

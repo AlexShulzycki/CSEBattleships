@@ -112,27 +112,24 @@ class Game {
 
 	//verify that space is empty;
 	isEmpty(a, b, board) {
-		//make sure order is correct to be fed into the loops
-		if (b[0] < a[0]) {
-			this.switch(a, b, 0);
-		}
-		if (b[1] < a[1]) {
-			this.switch(a, b, 1);
-		}
-
-
 		var empty = true;
+		console.log(a);
+		console.log("emptyinint");
 		for (var x = a[0]; x <= b[0]; x++) {
+			console.log("emtyfirstlooperino");
 			for (var y = a[1]; y <= b[1]; y++) {
+				console.log(board[x][y]);
 				if (board[x][y] != "Water") {
 					return false;
 				}
 			}
 		}
-		return empty;
+		console.log("empty: "+ empty);
+		return true;
 	}
 	//create ship on game board
 	putShip(id, a, b) {
+		console.log(a);
 		var board = this.idBNum.get(id);
 		var boardObj = this.idBoard.get(id);
 		//Types: Frigate (1*5), Sub(1*3), Carrier(2*5), Destroyer(1*4)
@@ -143,10 +140,13 @@ class Game {
 		if (b[1] < a[1]) {
 			this.switch(a, b, 1);
 		}
+		if(!this.isEmpty(board, a, b)){
+			return false;
+		}
 
 		var assign = function(board, name) {
-			for (var x = a[0]; x <= b[0]; x++) {
-				for (var y = a[1]; y <= b[1]; y++) {
+			for (let x = a[0]; x <= b[0]; x++) {
+				for (let y = a[1]; y <= b[1]; y++) {
 					board[x][y] = name;
 				}
 			}

@@ -140,13 +140,17 @@ var gameManager = function() {
 
 		//ending the game
 		let receiver = 0;
-		if (ws == game.wsList[0]) {
+		if (ws.id == 0) {
 			receiver = 1;
 		}
 		if ((game.state != 3) && (game.state != 4)) {
+			try{
 			game.wsList[receiver].send(JSON.stringify({
 				"type": 7
 			}));
+		}catch(err){
+
+		}
 		} else {
 			game.wsList[receiver].send(JSON.stringify({
 				"type": 6,
