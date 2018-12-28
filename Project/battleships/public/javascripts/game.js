@@ -71,7 +71,9 @@ var Boards = function() {
 
   }
   //confirm placing of ship
-  this.confirm = function(a,b)
+  this.confirm = function(a,b){
+
+	}
 
 
 }
@@ -80,5 +82,5 @@ window.onload = function() {
 	msg = document.getElementById("notifications");
 	msg.innerHTML = info.connecting;
 	webSockInit();
-	var boards = new Board();
+	var boards = new Boards();
 }

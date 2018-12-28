@@ -125,9 +125,20 @@ var gameManager = function() {
 		}
 	}
 
-	this.end = function(id) {
+	this.end = function(ws) {
+		let id = ws.id;
 		let map = this.gameMap;
 		let game = map.get(id);
+
+		//check if in game or just in queue
+		if(!(game instanceof Game)){
+			console.log("Removed from queue");
+			let index = this.waitQueue.indexOf(ws);
+			this.waitQueue.splice(index, 1);
+			return;
+		}
+
+		//ending the game
 		let receiver = 0;
 		if (game.wsList[game.idBNum.get(id)] == game.wsList[0]) {
 			receiver = 1;

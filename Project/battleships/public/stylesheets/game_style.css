@@ -116,3 +116,22 @@ table {
     padding: 0;
     display: inline-block;
 }
+.battlefield_stats{
+  margin-top: 3%;
+  border-radius: 5px;
+  border-width: thin;
+  border-color: black;
+  border-style: solid;
+  padding: 2%;
+}
+
+.battlefield_stats p {
+  display: inline-block;
+  padding: inherit;
+  margin: inherit;
+  float: right;
+  margin-right: 15%;
+}
+.label{
+  margin-top: 5%;
+}

@@ -34,9 +34,7 @@ wss.on("connection", function(ws) {
 
 	ws.on("close", function(cls){
 		console.log(cls+" ID "+ws.id+" disconnected..");
-		if(gameManager.gameMap.get(ws.id)!=undefined){
-			gameManager.end(ws.id);
-		}
+		gameManager.end(ws.id);
 	});
 });
 
