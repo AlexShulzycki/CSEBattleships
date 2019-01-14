@@ -26,7 +26,6 @@ var webSockInit = function() {
 			case 1: // placing
 				//confirm that it is placed
 
-
         let string = data.placed;
         string += " placed at (";
 				string += data.location[0][0] + ", " + data.location[0][1];

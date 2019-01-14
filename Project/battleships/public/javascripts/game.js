@@ -68,7 +68,7 @@ var Boards = function() {
 
   //send coordinates for verification
 	this.confirm = function(a,b){
-
+			//add code for inputting the desired coords to send
 	}
 
 	//place on the tiles
@@ -84,10 +84,6 @@ var Boards = function() {
 
 		assign(board, this)
   }
-  //confirm placing of ship
-  this.confirm = function(a,b){
-
-	}
 
 	this.tile = function(write, brd, x, y){
 		let tile = brd[x][y];
@@ -99,6 +95,7 @@ var Boards = function() {
 		}
 	}
 
+// for retrieving and writing stats. Purely cosmetic, doesnt send anything to the server, hacking it is useless.
 	this.stats = function(write, brd, ship){
 		let board = document.getElementsByClassName("battlefield_stats")[brd];
 		let classname = ship + "Stat";
