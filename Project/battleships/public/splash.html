@@ -6,7 +6,7 @@
         <link href="/stylesheets/style_splash.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Cinzel|
         Major+Mono+Display|Permanent+Marker|Righteous|Warnes" rel="stylesheet">
-        <script> ws = new WebSocket("ws://localhost:3000"); ws.onmessage = function(event){document.getElementById("playNum").innerHTML = event.data}; window.onload = function(){ws.send("4")}</script>
+        <script> ws = new WebSocket("ws://localhost:3000"); ws.onmessage = function(event){document.getElementById("playNum").innerHTML = event.data};ws.onopen = function(event){ws.send("4")}</script>
     </head>
 
     <body>
@@ -21,7 +21,7 @@
                 A two-player naval combat game. Can you guess where the enemy ships are?
             </p>
 
-            <form action="#" method="get">
+            <form action="/game" method="get">
                 <button type="submit">Start!</button>
             </form>
 

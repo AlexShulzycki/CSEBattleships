@@ -87,8 +87,7 @@ body {
     background: lightblue:
     border: 5px solid blue;
 }
-.battlefield_wrap {
-    margin-top: 50px;
+.battlefield_wrap{
     margin-bottom: 0;
 }
 .battlefield_cell_data {
